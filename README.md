@@ -1,11 +1,11 @@
 # backend-capstone
-> Short blurb about what your product does.
+> Sales rep assistant for order entry and processing.
 
 [![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
 
-One to two paragraph statement about your product and what it does.
+This application will server as an order entry assistant that generates the order info for a sales rep by pulling info from vendor api's.
+
+It will also generate an estimate to be delivered to the customer. After approval, it will be used to generate purchase orders for the supplies needed to complete the order.
 
 <img width="971" alt="home-page-screenshot" src="https://cloud.githubusercontent.com/assets/16551996/26755408/4597636e-4852-11e7-8002-3c445c7f28d8.png">
 
@@ -18,16 +18,7 @@ npm install my-crazy-module --save
 
 ## Usage example
 
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
-```
+code blocks and more screenshots.
 
 ## Meta
 
