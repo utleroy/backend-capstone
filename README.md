@@ -7,7 +7,8 @@
 
 One to two paragraph statement about your product and what it does.
 
-![](app/img/Back-end-capstone-storyboard.png)
+![]<img width="971" alt="home-page-screenshot" src="https://cloud.githubusercontent.com/assets/16551996/26755408/4597636e-4852-11e7-8002-3c445c7f28d8.png">
+
 
 ## Installation
 
