@@ -15,7 +15,7 @@ namespace lee_hankins_backend_capstone
 
             routes.MapRoute(
                 name: "Default",
-                url: "{controller}/{action}/{id}",
+                url: "{*catchall}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
