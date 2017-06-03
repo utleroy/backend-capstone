@@ -7,6 +7,7 @@ This application serves as an order entry assistant that generates the order inf
 
 It also generates an estimate to be delivered to the customer. After approval, it can be used to generate purchase orders for the supplies needed to complete the order.
 
+### Sample
 <img width="971" alt="home-page-screenshot" src="https://cloud.githubusercontent.com/assets/16551996/26755408/4597636e-4852-11e7-8002-3c445c7f28d8.png">
 
 
