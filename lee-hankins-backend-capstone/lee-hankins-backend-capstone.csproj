@@ -306,6 +306,8 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\img\" />
+    <Folder Include="app\js\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
