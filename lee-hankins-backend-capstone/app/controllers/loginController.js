@@ -1,4 +1,6 @@
 ﻿app.controller("loginController", ["$scope", "$http", "$location", function ($scope, $http, $location) {
+
+   
     $scope.username = "";
     $scope.password = "";
 
@@ -15,6 +17,7 @@
             },
             data: { grant_type: "password", username: $scope.username, password: $scope.password }
         })
+            
             .then(function (result) {
                 console.log("result=", result);
 
