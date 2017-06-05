@@ -1,12 +1,12 @@
-﻿{
-  "Products": [
-    {
-      "Description": "shirt1",
-      "Price": 199
-    },
-	{
-      "Description": "shirt2",
-      "Price": 299
-    }
-  ]
-}
+﻿[
+  {
+    "FirstName": "Lee",
+    "LastName": "Hankins",
+    "DateActive": ""
+  },
+  {
+    "FirstName": "Joe",
+    "LastName": "Camel",
+    "DateActive": ""
+  }
+]

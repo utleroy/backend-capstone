@@ -1,43 +1,37 @@
-﻿using lee_hankins_backend_capstone.Controllers.Interfaces;
-using lee_hankins_backend_capstone.Models;
-using System;
+﻿using lee_hankins_backend_capstone.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace lee_hankins_backend_capstone.Controllers
 {
-    [RoutePrefix("api/customer")]
     public class CustomerController : ApiController
     {
-        readonly ICustomerRepository _customerRepository;
-
-        public CustomerController(ICustomerRepository customerRepository)
+        // GET: api/Customer
+        public IEnumerable<Customer> Get()
         {
-            _customerRepository = customerRepository;
+            var customerRepository = new CustomerRepository();
+            return customerRepository.Retrieve();
         }
 
-        [HttpPost, Route]
-        public HttpResponseMessage RegisterCustomer(Customer customer)
+        // GET: api/Customer/5
+        public string Get(int id)
         {
-            if (string.IsNullOrWhiteSpace(customer.UserName))
-            {
-                return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Invalid Username");
-            }
-
-            _customerRepository.Save(customer);
-
-            return Request.CreateResponse(HttpStatusCode.OK);
+            return "value";
         }
 
-        [HttpGet, Route]
-        public HttpResponseMessage GetAll()
+        // POST: api/Customer
+        public void Post([FromBody]string value)
         {
-            var customers = _customerRepository.GetAll();
+        }
 
-            return Request.CreateResponse(HttpStatusCode.OK, customers);
+        // PUT: api/Customer/5
+        public void Put(int id, [FromBody]string value)
+        {
+        }
+
+        // DELETE: api/Customer/5
+        public void Delete(int id)
+        {
         }
     }
 }
