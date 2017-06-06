@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using System.Data.Entity;
 
 namespace lee_hankins_backend_capstone.Models
 {
@@ -20,8 +21,12 @@ namespace lee_hankins_backend_capstone.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Product> Products { get; set; }
+
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("RepAssist", throwIfV1Schema: false)
         {
         }
         

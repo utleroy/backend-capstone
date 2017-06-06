@@ -237,21 +237,33 @@
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\CustomerRepository.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductRepository.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706060128141_firstCustomerMigration.cs" />
+    <Compile Include="Migrations\201706060128141_firstCustomerMigration.Designer.cs">
+      <DependentUpon>201706060128141_firstCustomerMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706060408361_firstProductMigration.cs" />
+    <Compile Include="Migrations\201706060408361_firstProductMigration.Designer.cs">
+      <DependentUpon>201706060408361_firstProductMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app\app_data\seed-data.json" />
+    <Content Include="apiKeys.config" />
     <Content Include="app\controllers\homeController.js" />
     <Content Include="app\controllers\loginController.js" />
     <Content Include="app\controllers\signupController.js" />
@@ -259,6 +271,8 @@
     <Content Include="app\html\login.html" />
     <Content Include="app\html\signup.html" />
     <Content Include="app\js\app.js" />
+    <Content Include="app\services\commonService.js" />
+    <Content Include="app\services\productResource.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -266,6 +280,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\angular-mocks.js" />
+    <Content Include="Scripts\angular-resource.js" />
+    <Content Include="Scripts\angular-resource.min.js" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular-route.min.js" />
     <Content Include="Scripts\angular.js" />
@@ -296,6 +312,7 @@
     </Content>
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="Scripts\angular-resource.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -324,6 +341,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\app_data\" />
     <Folder Include="app\img\" />
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\Interfaces\" />
@@ -335,6 +353,14 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201706060128141_firstCustomerMigration.resx">
+      <DependentUpon>201706060128141_firstCustomerMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706060408361_firstProductMigration.resx">
+      <DependentUpon>201706060408361_firstProductMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

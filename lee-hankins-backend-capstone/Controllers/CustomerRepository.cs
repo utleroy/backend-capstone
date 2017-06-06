@@ -3,109 +3,111 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Hosting;
 using System.Web.Http;
 
 namespace lee_hankins_backend_capstone.Controllers
 {
-    //[RoutePrefix("api/Customer")]
+    [RoutePrefix("api/customer")]
     public class CustomerRepository : ApiController
     {
-        internal Customer Create()
-        {
-            Customer customer = new Customer()
-            {
-                DateActive = DateTime.Now
-            };
-            return customer;
-        }
+        //internal Customer Create()
+        //{
+        //    //Customer customer = new Customer()
+        //    //{
+        //    //    DateActive = DateTime.Now
+        //    //};
+        //    //return customer;
+        //}
 
-        internal List<Customer> Retrieve()
-        {
-            var jsonPath = HostingEnvironment.MapPath(@"~/app/app_data/seed-data.json");
+        //internal List<Customer> Retrieve()
+        //{
+        //    //var jsonPath = HostingEnvironment.MapPath(@"~/app/app_data/seed-data.json");
 
-            var json = System.IO.File.ReadAllText(jsonPath);
+        //    //var json = System.IO.File.ReadAllText(jsonPath);
 
-            var customerList = JsonConvert.DeserializeObject<List<Customer>>(json);
+        //    //var customerList = JsonConvert.DeserializeObject<List<Customer>>(json);
 
-            return customerList;
-        }
+        //    //return customerList;
+        //}
 
         //saves newly created customer
-        internal Customer Save(Customer customer)
-        {
-            var customerList = this.Retrieve();
+        //internal Customer Save(Customer customer)
+        //{
+        //    //var customerList = this.Retrieve();
 
-            var newId = customerList.Max(p => p.CustomerId);
+        //    //var newId = customerList.Max(p => p.CustomerId);
 
-            customer.CustomerId = newId + 1;
+        //    //customer.CustomerId = newId + 1;
 
-            customerList.Add(customer);
+        //    //customerList.Add(customer);
 
-            WriteData(customerList);
+        //    //WriteData(customerList);
 
-            return customer;
-        }
+        //    //return customer;
+        //}
 
         //updates existing customer
-        internal Customer Save(int id, Customer customer)
+        //internal Customer Save(int id, Customer customer)
+        //{
+        //var customerList = this.Retrieve();
+
+        //var customerIndex = customerList.FindIndex(p => p.CustomerId == customer.CustomerId);
+        //if (customerIndex > 0)
+        //{
+        //    customerList[customerIndex] = customer;
+        //}
+        //else
+        //{
+        //    return null;
+        //}
+        //WriteData(customerList);
+        //return customer;
+        //}
+
+        //private bool WriteData(List<Customer> customerList)
+        //{
+        //var jsonPath = HostingEnvironment.MapPath(@"~/app/app_data/seed-data.json");
+
+        //var json = JsonConvert.SerializeObject(customerList, Formatting.Indented);
+        //System.IO.File.WriteAllText(jsonPath, json);
+
+        //return true;
+        internal IEnumerable<Customer> Retrieve()
         {
-            var customerList = this.Retrieve();
-
-            var customerIndex = customerList.FindIndex(p => p.CustomerId == customer.CustomerId);
-            if (customerIndex > 0)
-            {
-                customerList[customerIndex] = customer;
-            }
-            else
-            {
-                return null;
-            }
-            WriteData(customerList);
-            return customer;
+            throw new NotImplementedException();
         }
-
-        private bool WriteData(List<Customer> customerList)
-        {
-            var jsonPath = HostingEnvironment.MapPath(@"~/app/app_data/seed-data.json");
-
-            var json = JsonConvert.SerializeObject(customerList, Formatting.Indented);
-            System.IO.File.WriteAllText(jsonPath, json);
-
-            return true;
-        }
-
-        
-        
-
-        //readonly ICustomerRepository _customerRepository;
-
-        //public CustomerRepository(ICustomerRepository customerRepository)
-        //{
-        //    _customerRepository = customerRepository;
-        //}
-
-        //[HttpPost, Route]
-        //public HttpResponseMessage RegisterCustomer(Customer customer)
-        //{
-        //    if (string.IsNullOrWhiteSpace(customer.UserName))
-        //    {
-        //        return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Invalid Username");
-        //    }
-
-        //    _customerRepository.Save(customer);
-
-        //    return Request.CreateResponse(HttpStatusCode.OK);
-        //}
-
-        //[HttpGet, Route]
-        //public HttpResponseMessage GetAll()
-        //{
-        //    var customers = _customerRepository.GetAll();
-
-        //    return Request.CreateResponse(HttpStatusCode.OK, customers);
-        //}
     }
+
+
+
+
+    //readonly ICustomerRepository _customerRepository;
+
+    //public CustomerRepository(ICustomerRepository customerRepository)
+    //{
+    //    _customerRepository = customerRepository;
+    //}
+
+    //[HttpPost, Route]
+    //public HttpResponseMessage RegisterCustomer(Customer customer)
+    //{
+    //    if (string.IsNullOrWhiteSpace(customer.UserName))
+    //    {
+    //        return Request.CreateErrorResponse(HttpStatusCode.BadRequest, "Invalid Username");
+    //    }
+
+    //    _customerRepository.Save(customer);
+
+    //    return Request.CreateResponse(HttpStatusCode.OK);
+    //}
+
+    //[HttpGet, Route]
+    //public HttpResponseMessage GetAll()
+    //{
+    //    var customers = _customerRepository.GetAll();
+
+    //    return Request.CreateResponse(HttpStatusCode.OK, customers);
+    //}
+    //}
 }

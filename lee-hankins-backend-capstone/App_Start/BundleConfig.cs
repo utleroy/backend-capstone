@@ -27,9 +27,13 @@ namespace lee_hankins_backend_capstone
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                 "~/Scripts/angular.js",
                 "~/Scripts/angular-route.js",
+                "~/Scripts/angular-resource.js",
                 "~/app/js/app.js")
                 .IncludeDirectory("~/app/js/", "*.js", true)
-                .IncludeDirectory("~/app/controllers/", "*.js", true));
+                .IncludeDirectory("~/app/controllers/", "*.js", true)
+                .IncludeDirectory("~/app/services/", "*.js", true)
+                );
+        
         }
     }
 }
