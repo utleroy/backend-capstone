@@ -240,3 +240,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+
+lee-hankins-backend-capstone/apiKeys.config
