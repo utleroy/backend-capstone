@@ -13,6 +13,6 @@ namespace lee_hankins_backend_capstone.Models
         public string LastName { get; set; }
         public DateTime DateActive { get; internal set; }
 
-
+ 
     }
 }
