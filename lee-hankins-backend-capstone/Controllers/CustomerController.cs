@@ -6,14 +6,20 @@ namespace lee_hankins_backend_capstone.Controllers
 {
     public class CustomerController : ApiController
     {
+        private CustomerRepository _customerRepository;
+
+        public CustomerController(CustomerRepository customerRepository)
+        {
+            _customerRepository = customerRepository;
+        }
+
         // GET: api/Customer
         public IEnumerable<Customer> Get()
         {
-            var customerRepository = new CustomerRepository();
-            return customerRepository.Retrieve();
+            return _customerRepository.GetAll();
         }
 
-        // GET: api/Customer/5
+        // GET: api/Customer/
         public string Get(int id)
         {
             return "value";
