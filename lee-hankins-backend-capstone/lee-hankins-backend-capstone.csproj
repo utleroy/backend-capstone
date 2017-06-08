@@ -263,7 +263,9 @@
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\CustomerRepository.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductionChargesController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductionChargesRepository.cs" />
     <Compile Include="Controllers\ProductRepository.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
@@ -283,9 +285,18 @@
     <Compile Include="Migrations\201706060408361_firstProductMigration.Designer.cs">
       <DependentUpon>201706060408361_firstProductMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706080059133_ProductionCharges.cs" />
+    <Compile Include="Migrations\201706080059133_ProductionCharges.Designer.cs">
+      <DependentUpon>201706080059133_ProductionCharges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706080111468_ProductionCharges1.cs" />
+    <Compile Include="Migrations\201706080111468_ProductionCharges1.Designer.cs">
+      <DependentUpon>201706080111468_ProductionCharges1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ProductionCharges.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Product.cs" />
@@ -392,6 +403,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706060408361_firstProductMigration.resx">
       <DependentUpon>201706060408361_firstProductMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706080059133_ProductionCharges.resx">
+      <DependentUpon>201706080059133_ProductionCharges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706080111468_ProductionCharges1.resx">
+      <DependentUpon>201706080111468_ProductionCharges1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

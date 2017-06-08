@@ -24,7 +24,6 @@ namespace lee_hankins_backend_capstone.Controllers
         }
 
         
-
         public Product Get(int id)
         {
             return _context.Product.Find(id);
@@ -32,18 +31,10 @@ namespace lee_hankins_backend_capstone.Controllers
 
         public IEnumerable<Product> GetAll()
         {
-           // var request = new RestRequest("https://api.ssactivewear.com/v2/products/", Method.GET);
-
-           // request.AddQueryParameter("id", "2");
-           // request.AddHeader("Authorization", ConfigurationManager.AppSettings["ssactive"]);
-
-           // var result = _restClient.Get<List<Product>>(request);
-
-           //return  result.Data;
             _restClient.Authenticator = new HttpBasicAuthenticator("77205", "19ca413e-38eb-4f90-b617-c06737464fc7");
 
             var request = new RestRequest();
-            request.Resource = "/v2/products/81480,B00760004,00821780008137";
+            request.Resource = "/v2/products/?style=Gildan 5000";
 
             var response = _restClient.Get<List<Product>>(request);
 
