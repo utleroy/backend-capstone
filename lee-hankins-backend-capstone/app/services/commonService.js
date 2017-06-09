@@ -1,5 +1,6 @@
-﻿var serv = angular.module("commonService", ["ngResource"]);
+﻿var serv = angular.module("commonService", ["ngResource"])
+serv.constant(
+    "appSettings", {
+    serverPath: "http://localhost:51344/"
+}());
 
-serv.constants("appSettings", {
-    serverPath: "http://localhost:51344/api/Customer"
-})

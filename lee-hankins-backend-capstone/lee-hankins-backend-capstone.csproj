@@ -310,6 +310,7 @@
     <Content Include="app\controllers\homeController.js" />
     <Content Include="app\controllers\loginController.js" />
     <Content Include="app\controllers\signupController.js" />
+    <Content Include="app\controllers\ssActiveProducts.js" />
     <Content Include="app\html\home.html" />
     <Content Include="app\html\login.html" />
     <Content Include="app\html\signup.html" />
