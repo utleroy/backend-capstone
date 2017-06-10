@@ -38,6 +38,7 @@ namespace lee_hankins_backend_capstone.Controllers
         // DELETE: api/Customer/5
         public void Delete(int id)
         {
+            _customerRepository.Delete(id); 
         }
     }
 }

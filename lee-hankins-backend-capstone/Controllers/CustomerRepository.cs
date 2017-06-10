@@ -40,6 +40,12 @@ namespace lee_hankins_backend_capstone.Controllers
             return _context.Customer;
         }
 
+        public void Delete(int id)
+        {
+            _context.Customer.Remove(_context.Customer.Find(id));
+            _context.SaveChanges();
+        }
+
 
 
 

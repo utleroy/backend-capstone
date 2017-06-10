@@ -11,6 +11,7 @@ namespace lee_hankins_backend_capstone.Models
         public int CustomerId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string Email { get; set; }
         public DateTime DateActive { get; internal set; }
 
  
