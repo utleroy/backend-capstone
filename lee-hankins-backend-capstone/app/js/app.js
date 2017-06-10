@@ -18,6 +18,10 @@ app.config(["$routeProvider", function ($routeProvider) {
         templateUrl: "app/html/customerView.html",
         controller: "customerController"
     })
+    .when("/add-customer",{
+        templateUrl: "app/html/singleCustomer.html",
+        controller: "customerController"
+    })
             
 }
 ])

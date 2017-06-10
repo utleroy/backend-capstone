@@ -10,18 +10,20 @@
                 <div id="contact" class="form-container">
                     <fieldset>
                         <div id="message"></div>
-                        <form method="post" action="js/contact-form.php" name="contactform" id="contactform">
+                        <form method="post" id="contactform">
                             <div class="form-group">
-                                <input name="name" id="name" type="text" value="" placeholder="Name" class="form-control">
+                                <input name="name" id="firstname" type="text" value="" placeholder="First Name" class="form-control" ng-model="FirstName">
                             </div>
                             <div class="form-group">
-                                <input name="email" id="email" type="text" value="" placeholder="Email" class="form-control">
+                                <input name="email" id="lastname" type="text" value="" placeholder="Last Name" class="form-control" ng-model="LastName">
                             </div>
                             <div class="form-group">
-                                <input name="phone" id="phone" type="text" value="" placeholder="Phone" class="form-control">
+                                <input name="email" id="email" type="text" value="" placeholder="Email" class="form-control" ng-model="Email">
                             </div>
+               
+                            
                             <div class="form-group">
-                               <a href="customerView.html"><button class="btn btn-primary" type="submit">Add</button></a>
+                               <a href="app/html/customerView.html"><button class="btn btn-primary" type="submit" ng-click="addCustomer()">Add</button></a>
                             </div>
                         </form>
                     </fieldset>
