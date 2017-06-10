@@ -331,6 +331,7 @@
     <Content Include="app\html\login.html" />
     <Content Include="app\html\newCustomer.html" />
     <Content Include="app\html\signup.html" />
+    <Content Include="app\html\singleCustomer.html" />
     <Content Include="app\js\app.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
