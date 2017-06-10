@@ -4,6 +4,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using System.Data.Entity;
+using System;
+using System.Data.Entity.Migrations;
 
 namespace lee_hankins_backend_capstone.Models
 {
@@ -22,8 +24,10 @@ namespace lee_hankins_backend_capstone.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
 
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Customer> Customer { get; set; }
+        public DbSet<Product> Product { get; set; }
+        public DbSet<ProductionCharges> ProductionCharges { get; set; }
+        public DbSet<LineItem> LineItem { get; set; }
 
         public ApplicationDbContext()
             : base("RepAssist", throwIfV1Schema: false)
@@ -33,6 +37,11 @@ namespace lee_hankins_backend_capstone.Models
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
+        }
+
+        public static implicit operator DbMigrationsConfiguration(ApplicationDbContext v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

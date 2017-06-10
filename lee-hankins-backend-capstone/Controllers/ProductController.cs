@@ -10,11 +10,16 @@ namespace lee_hankins_backend_capstone.Controllers
 {
     public class ProductController : ApiController
     {
+        private ProductRepository _productRepository;
+
+        public ProductController(ProductRepository productRepository)
+        {
+            _productRepository = productRepository;
+        }
         // GET: api/Product
         public IEnumerable<Product> Get()
         {
-            var productRepository = new ProductRepository();
-            return ProductRepository.Retrieve();
+            return _productRepository.GetAll();
         }
 
         // GET: api/Product/5

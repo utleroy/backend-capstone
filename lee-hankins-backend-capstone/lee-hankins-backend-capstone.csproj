@@ -77,6 +77,26 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net452\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.3.0.0.108\lib\net40\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Net4, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.3.0.0.108\lib\net40\StructureMap.Net4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.web.3.0.0.108\lib\net40\StructureMap.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -138,6 +158,10 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0.5\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -204,6 +228,8 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\StructuremapMvc.cs" />
+    <Compile Include="App_Start\StructuremapWebApi.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
     <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
@@ -237,9 +263,19 @@
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\CustomerRepository.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LineItemController.cs" />
+    <Compile Include="Controllers\LineItemRepository.cs" />
+    <Compile Include="Controllers\ProductionChargesController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Controllers\ProductionChargesRepository.cs" />
     <Compile Include="Controllers\ProductRepository.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="DependencyResolution\DefaultRegistry.cs" />
+    <Compile Include="DependencyResolution\IoC.cs" />
+    <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />
+    <Compile Include="DependencyResolution\StructureMapScopeModule.cs" />
+    <Compile Include="DependencyResolution\StructureMapWebApiDependencyResolver.cs" />
+    <Compile Include="DependencyResolution\StructureMapWebApiDependencyScope.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -251,9 +287,31 @@
     <Compile Include="Migrations\201706060408361_firstProductMigration.Designer.cs">
       <DependentUpon>201706060408361_firstProductMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706080059133_ProductionCharges.cs" />
+    <Compile Include="Migrations\201706080059133_ProductionCharges.Designer.cs">
+      <DependentUpon>201706080059133_ProductionCharges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706080111468_ProductionCharges1.cs" />
+    <Compile Include="Migrations\201706080111468_ProductionCharges1.Designer.cs">
+      <DependentUpon>201706080111468_ProductionCharges1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706100128014_firstLineItemDb.cs" />
+    <Compile Include="Migrations\201706100128014_firstLineItemDb.Designer.cs">
+      <DependentUpon>201706100128014_firstLineItemDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706100137107_firstLineItemDb1.cs" />
+    <Compile Include="Migrations\201706100137107_firstLineItemDb1.Designer.cs">
+      <DependentUpon>201706100137107_firstLineItemDb1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706101822355_firstCustomerMigration1.cs" />
+    <Compile Include="Migrations\201706101822355_firstCustomerMigration1.Designer.cs">
+      <DependentUpon>201706101822355_firstCustomerMigration1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\LineItem.cs" />
+    <Compile Include="Models\ProductionCharges.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Product.cs" />
@@ -264,15 +322,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="apiKeys.config" />
+    <Content Include="app\controllers\customerController.js" />
     <Content Include="app\controllers\homeController.js" />
     <Content Include="app\controllers\loginController.js" />
     <Content Include="app\controllers\signupController.js" />
+    <Content Include="app\html\customerView.html" />
     <Content Include="app\html\home.html" />
     <Content Include="app\html\login.html" />
+    <Content Include="app\html\newCustomer.html" />
     <Content Include="app\html\signup.html" />
     <Content Include="app\js\app.js" />
-    <Content Include="app\services\commonService.js" />
-    <Content Include="app\services\productResource.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -313,7 +372,6 @@
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="Scripts\angular-resource.min.js.map" />
-    <Content Include=".gitignore" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -343,6 +401,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\app_data\" />
+    <Folder Include="app\css\" />
     <Folder Include="app\img\" />
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\Interfaces\" />
@@ -361,6 +420,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706060408361_firstProductMigration.resx">
       <DependentUpon>201706060408361_firstProductMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706080059133_ProductionCharges.resx">
+      <DependentUpon>201706080059133_ProductionCharges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706080111468_ProductionCharges1.resx">
+      <DependentUpon>201706080111468_ProductionCharges1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706100128014_firstLineItemDb.resx">
+      <DependentUpon>201706100128014_firstLineItemDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706100137107_firstLineItemDb1.resx">
+      <DependentUpon>201706100137107_firstLineItemDb1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706101822355_firstCustomerMigration1.resx">
+      <DependentUpon>201706101822355_firstCustomerMigration1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

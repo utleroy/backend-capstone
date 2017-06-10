@@ -1,8 +1,17 @@
 ﻿app.controller("homeController", ["$scope", "$http", function ($scope, $http) {
-    $scope.values = [];
+    $scope.products = [];
 
-    $http.get("/api/values")
-        .then(function (result) {
-            $scope.values = result.data;
-        });
+   
+    $http.get("/api/product")
+    .then(function (result) {
+        $scope.products = result.data;
+    });
+
+            
+    
+
+    //$http.get("/api/product")
+    //    .then(function (result) {
+    //        $scope.values = result.data;
+    //    });
 }])

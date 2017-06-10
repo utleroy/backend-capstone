@@ -20,19 +20,21 @@ namespace lee_hankins_backend_capstone.Migrations
             //You can use the DbSet<T>.AddOrUpdate() helper extension method
             //to avoid creating duplicate seed data.E.g.
 
-            context.Customers.AddRange(new[] {
-                new Customer { FirstName = "Andrew Peters",DateActive = DateTime.Now },
-                new Customer { FirstName = "Brice Lambson", DateActive = DateTime.Now },
-                new Customer { FirstName = "Rowan Miller", DateActive = DateTime.Now }
-              }
+            context.Customer.AddRange(new[] {
+                new Customer { FirstName = "Lee", LastName = "Hankins", Email = "bryanlhankins@gmail.com", DateActive = DateTime.Now },
+                new Customer { FirstName = "John", LastName = "Brown", Email = "blah@blah.com", DateActive = DateTime.Now },
+                new Customer { FirstName = "Mary", LastName = "Black", Email = "whah@whah.com", DateActive = DateTime.Now }
+                }
             );
 
 
-            context.Products.AddRange(new[]
+            context.Product.AddRange(new[]
             {
                   new Product { styleName = "shirt" }
-            }
+                }
             );
+
+            
 
 
           
