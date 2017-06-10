@@ -263,6 +263,8 @@
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\CustomerRepository.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LineItemController.cs" />
+    <Compile Include="Controllers\LineItemRepository.cs" />
     <Compile Include="Controllers\ProductionChargesController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProductionChargesRepository.cs" />
@@ -293,9 +295,14 @@
     <Compile Include="Migrations\201706080111468_ProductionCharges1.Designer.cs">
       <DependentUpon>201706080111468_ProductionCharges1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706100128014_firstLineItemDb.cs" />
+    <Compile Include="Migrations\201706100128014_firstLineItemDb.Designer.cs">
+      <DependentUpon>201706100128014_firstLineItemDb.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\LineItem.cs" />
     <Compile Include="Models\ProductionCharges.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -410,6 +417,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706080111468_ProductionCharges1.resx">
       <DependentUpon>201706080111468_ProductionCharges1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706100128014_firstLineItemDb.resx">
+      <DependentUpon>201706100128014_firstLineItemDb.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
