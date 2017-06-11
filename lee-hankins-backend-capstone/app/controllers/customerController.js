@@ -1,7 +1,6 @@
-﻿app.controller("customerController", ["$scope", "$http", function ($scope, $http) {
+﻿app.controller("customerController", ["$scope", "$http", function ($scope, $http,) {
     $scope.customers = [];
 
-   
     $http.get("/api/customer")
     .then(function (result) {
         $scope.customers = result.data;
@@ -28,10 +27,8 @@
         .then(function (result) {
             $scope.customers = result.data;
         });
-
+        $location.path("/customer");
        
-
-        $location.path("/customers");
     }
 
 }])

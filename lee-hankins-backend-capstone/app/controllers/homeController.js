@@ -1,17 +1,14 @@
 ﻿app.controller("homeController", ["$scope", "$http", function ($scope, $http) {
-    $scope.products = [];
+    $scope.addCustomer = function () {
+        var newCustomer = {
+            FirstName: $scope.FirstName,
+            lastName: $scope.LastName,
+            Email: $scope.Email
+           
+        }
 
-   
-    $http.get("/api/product")
-    .then(function (result) {
-        $scope.products = result.data;
-    });
+        $http.post("/api/account/register", newUser);
 
-            
-    
-
-    //$http.get("/api/product")
-    //    .then(function (result) {
-    //        $scope.values = result.data;
-    //    });
+        $location.path("/");
+    }
 }])

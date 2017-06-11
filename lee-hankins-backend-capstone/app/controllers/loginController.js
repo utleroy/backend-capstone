@@ -2,8 +2,6 @@
     $scope.username = "1@1.com";
     $scope.password = "!Lee1111";
 
-   
-
     $scope.login = function () {
         $http({
             method: 'POST',
