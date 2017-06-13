@@ -26,6 +26,7 @@ namespace lee_hankins_backend_capstone.Controllers
 
         public void Save(Models.Customer newCustomer)
         {
+            newCustomer.DateActive = DateTime.Now;
             _context.Customer.Add(newCustomer);
             _context.SaveChanges();
         }

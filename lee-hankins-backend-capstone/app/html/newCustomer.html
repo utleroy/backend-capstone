@@ -2,13 +2,13 @@
     <div class="row">
         <div class="col-md-6 pull-left">
             <div class="form-group">
-                <input name="name" id="firstname" type="text" value="" placeholder="First Name" class="form-control" ng-model="FirstName">
+                <input name="name" id="firstname" type="text" value="" placeholder="First Name" class="form-control" ng-model="newCustomer.FirstName">
             </div>
             <div class="form-group">
-                <input name="email" id="lastname" type="text" value="" placeholder="Last Name" class="form-control" ng-model="LastName">
+                <input name="email" id="lastname" type="text" value="" placeholder="Last Name" class="form-control" ng-model="newCustomer.LastName">
             </div>
             <div class="form-group">
-                <input name="email" id="email" type="text" value="" placeholder="Email" class="form-control" ng-model="Email">
+                <input name="email" id="email" type="text" value="" placeholder="Email" class="form-control" ng-model="newCustomer.Email">
             </div>
             <div class="form-group">
                 <button class="btn btn-primary" type="submit" ng-click="addCustomer()">Add</button>

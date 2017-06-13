@@ -26,8 +26,9 @@ namespace lee_hankins_backend_capstone.Controllers
         }
 
         // POST: api/Customer
-        public void Post([FromBody]string value)
+        public void Post(Customer newCustomer)
         {
+            _customerRepository.Save(newCustomer);
         }
 
         // PUT: api/Customer/5
