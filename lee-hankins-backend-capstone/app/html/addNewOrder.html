@@ -1,0 +1,15 @@
+﻿<div>
+    <select ng-model="Customer" ng-options="item.FirstName + ' ' +  item.LastName for item in customerList">
+        <option value="" label="Select Customer for New Order"></option>
+    </select>
+
+    <select ng-model="ProductStyle" ng-options="item.styleName for item in productList">
+        <option value="" label="Select Style"></option>
+    </select>
+
+    <select ng-model="ProductColor" ng-options="item.colorName for item in productList">
+        <option value="" label="Select Color"></option>
+    </select>
+
+</div>
+

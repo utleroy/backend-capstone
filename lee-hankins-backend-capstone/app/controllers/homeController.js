@@ -9,8 +9,6 @@
            
         }
 
-       
-
         $http.post("/api/account/register", newUser);
 
         $location.path("/");
@@ -20,4 +18,27 @@
         console.log("add customer button click");
         $location.path("add-customer");
     }
+
+    $scope.addNewOrder = function () {
+        console.log("add new order button clicked");
+        $location.path("new-order");
+    }
+
+    $scope.customertList = [];
+    $scope.populateCustomerList = function () {
+        $http.get("api/customer/")
+            .then(function (result) {
+                $scope.customerList = result.data;
+            });
+    };
+    $scope.populateCustomerList();
+
+    $scope.productList = [];
+    $scope.populateProductList = function () {
+        $http.get("api/product/")
+            .then(function (result) {
+                $scope.productList = result.data;
+            });
+    };
+    $scope.populateProductList();
 }])
