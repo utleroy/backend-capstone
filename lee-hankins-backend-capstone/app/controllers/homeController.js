@@ -31,6 +31,7 @@
                 $scope.customerList = result.data;
             });
     };
+
     $scope.populateCustomerList();
 
     $scope.productList = [];

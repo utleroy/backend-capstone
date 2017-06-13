@@ -1,15 +1,21 @@
 ﻿<div>
-    <select ng-model="Customer" ng-options="item.FirstName + ' ' +  item.LastName for item in customerList">
+    <select ng-model="Customer.selected" ng-options="item.FirstName + ' ' +  item.LastName for item in customerList">
         <option value="" label="Select Customer for New Order"></option>
     </select>
 
-    <select ng-model="ProductStyle" ng-options="item.styleName for item in productList">
+    <select ng-model="ProductStyle.display" ng-options="item.styleName for item in productList">
         <option value="" label="Select Style"></option>
     </select>
 
     <select ng-model="ProductColor" ng-options="item.colorName for item in productList">
         <option value="" label="Select Color"></option>
     </select>
+
+
+    <br />
+    <div>{{Customer.selected.FirstName}} {{Customer.selected.LastName}}</div>
+    <div>{{ProductStyle.display.styleName}}</div>
+    <div>{{salePrice}}</div>
 
 </div>
 
