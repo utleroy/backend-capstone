@@ -44,6 +44,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BundleTransformer.Autoprefixer, Version=1.9.159.0, Culture=neutral, PublicKeyToken=973c344c93aac60d, processorArchitecture=MSIL">
+      <HintPath>..\packages\BundleTransformer.Autoprefixer.1.9.159\lib\net40\BundleTransformer.Autoprefixer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BundleTransformer.Core, Version=1.9.152.0, Culture=neutral, PublicKeyToken=973c344c93aac60d, processorArchitecture=MSIL">
+      <HintPath>..\packages\BundleTransformer.Core.1.9.152\lib\net40\BundleTransformer.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="JavaScriptEngineSwitcher.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c608b2a8cc9e4472, processorArchitecture=MSIL">
+      <HintPath>..\packages\JavaScriptEngineSwitcher.Core.2.0.0\lib\net451\JavaScriptEngineSwitcher.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -81,6 +93,10 @@
       <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.105.2.3\lib\net452\RestSharp.dll</HintPath>
       <Private>True</Private>
@@ -115,9 +131,6 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
     </Reference>
@@ -322,6 +335,112 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="apiKeys.config" />
+    <Content Include="app\content\css\bootstrap.css" />
+    <Content Include="app\content\css\bootstrap.min.css" />
+    <Content Include="app\content\css\documentation.css" />
+    <Content Include="app\content\css\font-awesome.min.css" />
+    <Content Include="app\content\css\jquery.tocify.css" />
+    <Content Include="app\content\css\prettify.css" />
+    <Content Include="app\content\css\style-library-1.css" />
+    <Content Include="app\content\fonts\fontawesome-webfont.svg" />
+    <Content Include="app\content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\content\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="app\content\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="app\content\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="app\content\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="app\content\ico\favicon.png" />
+    <Content Include="app\content\images\bootstrap-starter-kit.png" />
+    <Content Include="app\content\images\builder-1.png" />
+    <Content Include="app\content\images\builder-2.png" />
+    <Content Include="app\content\images\builder-3.png" />
+    <Content Include="app\content\images\builder-4.png" />
+    <Content Include="app\content\images\builder-5.png" />
+    <Content Include="app\content\images\builder-6.png" />
+    <Content Include="app\content\images\code-1.png" />
+    <Content Include="app\content\images\code-10.png" />
+    <Content Include="app\content\images\code-2.png" />
+    <Content Include="app\content\images\code-3.png" />
+    <Content Include="app\content\images\code-4.png" />
+    <Content Include="app\content\images\code-5.png" />
+    <Content Include="app\content\images\code-6.png" />
+    <Content Include="app\content\images\code-7.png" />
+    <Content Include="app\content\images\code-8.png" />
+    <Content Include="app\content\images\code-9.png" />
+    <Content Include="app\content\images\thumbs\blog1.png" />
+    <Content Include="app\content\images\thumbs\contact1.png" />
+    <Content Include="app\content\images\thumbs\contact2.png" />
+    <Content Include="app\content\images\thumbs\contact3.png" />
+    <Content Include="app\content\images\thumbs\content1-1.png" />
+    <Content Include="app\content\images\thumbs\content1-2.png" />
+    <Content Include="app\content\images\thumbs\content1-3.png" />
+    <Content Include="app\content\images\thumbs\content1-4.png" />
+    <Content Include="app\content\images\thumbs\content1-5.png" />
+    <Content Include="app\content\images\thumbs\content1-5v2.png" />
+    <Content Include="app\content\images\thumbs\content1-6.png" />
+    <Content Include="app\content\images\thumbs\content1-7.png" />
+    <Content Include="app\content\images\thumbs\content1-8.png" />
+    <Content Include="app\content\images\thumbs\content1-9.png" />
+    <Content Include="app\content\images\thumbs\content2-1.png" />
+    <Content Include="app\content\images\thumbs\content2-10.png" />
+    <Content Include="app\content\images\thumbs\content2-2.png" />
+    <Content Include="app\content\images\thumbs\content2-3.png" />
+    <Content Include="app\content\images\thumbs\content2-4.png" />
+    <Content Include="app\content\images\thumbs\content2-5v1.png" />
+    <Content Include="app\content\images\thumbs\content2-5v2.png" />
+    <Content Include="app\content\images\thumbs\content2-6.png" />
+    <Content Include="app\content\images\thumbs\content2-7.png" />
+    <Content Include="app\content\images\thumbs\content2-8.png" />
+    <Content Include="app\content\images\thumbs\content2-9.png" />
+    <Content Include="app\content\images\thumbs\content3-1.png" />
+    <Content Include="app\content\images\thumbs\content3-10.png" />
+    <Content Include="app\content\images\thumbs\content3-11.png" />
+    <Content Include="app\content\images\thumbs\content3-2.png" />
+    <Content Include="app\content\images\thumbs\content3-3.png" />
+    <Content Include="app\content\images\thumbs\content3-4.png" />
+    <Content Include="app\content\images\thumbs\content3-5.png" />
+    <Content Include="app\content\images\thumbs\content3-6.png" />
+    <Content Include="app\content\images\thumbs\content3-7.png" />
+    <Content Include="app\content\images\thumbs\content3-8.png" />
+    <Content Include="app\content\images\thumbs\content3-9.png" />
+    <Content Include="app\content\images\thumbs\footer1.png" />
+    <Content Include="app\content\images\thumbs\footer2.png" />
+    <Content Include="app\content\images\thumbs\footer3.png" />
+    <Content Include="app\content\images\thumbs\footer4.png" />
+    <Content Include="app\content\images\thumbs\footer5.png" />
+    <Content Include="app\content\images\thumbs\footer6.png" />
+    <Content Include="app\content\images\thumbs\gallery1.png" />
+    <Content Include="app\content\images\thumbs\gallery2.png" />
+    <Content Include="app\content\images\thumbs\gallery3.png" />
+    <Content Include="app\content\images\thumbs\header1.png" />
+    <Content Include="app\content\images\thumbs\header2.png" />
+    <Content Include="app\content\images\thumbs\header3.png" />
+    <Content Include="app\content\images\thumbs\pricing-tables-1.png" />
+    <Content Include="app\content\images\thumbs\pricing-tables-2.png" />
+    <Content Include="app\content\images\thumbs\pricing-tables-3.png" />
+    <Content Include="app\content\images\thumbs\promo1.png" />
+    <Content Include="app\content\images\thumbs\promo2.png" />
+    <Content Include="app\content\images\thumbs\promo3.png" />
+    <Content Include="app\content\images\thumbs\shop1.png" />
+    <Content Include="app\content\images\thumbs\shop2.png" />
+    <Content Include="app\content\images\thumbs\shop3.png" />
+    <Content Include="app\content\images\thumbs\shop4.png" />
+    <Content Include="app\content\images\thumbs\shop5v1.png" />
+    <Content Include="app\content\images\thumbs\shop5v2.png" />
+    <Content Include="app\content\images\thumbs\shop6v1.png" />
+    <Content Include="app\content\images\thumbs\shop6v2.png" />
+    <Content Include="app\content\images\thumbs\shop7.png" />
+    <Content Include="app\content\images\thumbs\team1.png" />
+    <Content Include="app\content\images\thumbs\team2.png" />
+    <Content Include="app\content\images\thumbs\team3.png" />
+    <Content Include="app\content\images\thumbs\team4.png" />
+    <Content Include="app\content\images\web-1.png" />
+    <Content Include="app\content\images\web-2.png" />
+    <Content Include="app\content\js\bootstrap.js" />
+    <Content Include="app\content\js\bootstrap.min.js" />
+    <Content Include="app\content\js\jquery-ui.min.js" />
+    <Content Include="app\content\js\jquery.min.js" />
+    <Content Include="app\content\js\jquery.tocify.min.js" />
+    <Content Include="app\content\js\prettify.js" />
     <Content Include="app\controllers\customerController.js" />
     <Content Include="app\controllers\homeController.js" />
     <Content Include="app\controllers\loginController.js" />
@@ -373,6 +492,13 @@
     <Content Include="Scripts\angular.min.js.map" />
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="Scripts\angular-resource.min.js.map" />
+    <Content Include="app\content\fonts\fontawesome-webfont.eot" />
+    <Content Include="app\content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="app\content\fonts\fontawesome-webfont.woff" />
+    <Content Include="app\content\fonts\FontAwesome.otf" />
+    <Content Include="app\content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="app\content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="app\content\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -402,7 +528,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\app_data\" />
-    <Folder Include="app\css\" />
     <Folder Include="app\img\" />
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\Interfaces\" />

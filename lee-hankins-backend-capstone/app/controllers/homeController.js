@@ -1,4 +1,6 @@
-﻿app.controller("homeController", ["$scope", "$http", function ($scope, $http) {
+﻿app.controller("homeController", ["$scope", "$location", "$http", function ($scope, $location, $http) {
+    $scope.addCustomer;
+
     $scope.addCustomer = function () {
         var newCustomer = {
             FirstName: $scope.FirstName,
@@ -7,8 +9,15 @@
            
         }
 
+       
+
         $http.post("/api/account/register", newUser);
 
         $location.path("/");
+    }
+
+    $scope.addNewCustomer = function () {
+        console.log("add customer button click");
+        $location.path("add-customer");
     }
 }])

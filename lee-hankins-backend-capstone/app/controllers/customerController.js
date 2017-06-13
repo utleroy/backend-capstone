@@ -1,5 +1,6 @@
-﻿app.controller("customerController", ["$scope", "$http", function ($scope, $http,) {
+﻿app.controller("customerController", ["$scope", "$http", "$location", function ($scope, $http, $location) {
     $scope.customers = [];
+    $scope.addNewCustomer;
 
     $http.get("/api/customer")
     .then(function (result) {
@@ -12,22 +13,21 @@
             .then(function (result) {
                 $scope.customers = result.data;
             });
-
-        
     }
 
-    $scope.addCustomer = function (newCustomer) {
-        var newCustomer = {
-            FirstName: $scope.FirstName,
-            LastName :$scope.LastName,
-            Email: $scope.Email
-        }
+    $scope.newCustomer = {
+        FirstName: "",
+        LastName : "",
+        Email: ""
+    }
 
-        $http.post("/api/customer" + newCustomer.CustomerId)
+    $scope.addCustomer = function () {
+        console.log("test click", $scope.newCustomer);
+        $http.post("/api/customer", $scope.newCustomer)
         .then(function (result) {
-            $scope.customers = result.data;
+            $location.path("customers");
         });
-        $location.path("/customer");
+       
        
     }
 
