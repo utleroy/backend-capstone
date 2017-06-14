@@ -34,7 +34,7 @@ namespace lee_hankins_backend_capstone.Controllers
             _restClient.Authenticator = new HttpBasicAuthenticator("77205", "19ca413e-38eb-4f90-b617-c06737464fc7");
 
             var request = new RestRequest();
-            request.Resource = "/v2/products/?style=Gildan 2000,Gildan 5000,Gildan 12000";
+            request.Resource = "/v2/products/?style=39";
 
             var response = _restClient.Get<List<Product>>(request);
 
