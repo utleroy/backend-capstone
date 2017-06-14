@@ -8,13 +8,13 @@
             </div>
 
         <div class="form-group">
-            <select class="form-control" ng-model="ProductStyle.display" ng-options="item.styleName for item in productList">
+            <select class="form-control" ng-model="ProductStyle.selected" ng-options="item.styleName + ' ' + item.salePrice for item in productList">
                 <option value="" label="Select Style"></option>
             </select>
         </div>
 
         <div class="form-group">
-            <select class="form-control" ng-model="ProductColor" ng-options="item.colorName for item in productList">
+            <select class="form-control" ng-model="ProductColor.display" ng-options="item.colorName for item in productList">
                 <option value="" label="Select Color"></option>
             </select>
         </div>
@@ -22,7 +22,8 @@
 
             <br />
             <div>{{Customer.selected.FirstName}} {{Customer.selected.LastName}}</div>
-            <div>{{ProductStyle.display.styleName}}</div>
+            <div>{{ProductStyle.selected.styleName}} {{ProductStyle.selected.salePrice}}</div>
+            <div>{{ProductColor.display.colorName}}</div>
 
 
         </div>

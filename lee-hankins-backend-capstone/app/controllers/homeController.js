@@ -24,7 +24,7 @@
         $location.path("new-order");
     }
 
-    $scope.customertList = [];
+    
     $scope.populateCustomerList = function () {
         $http.get("api/customer/")
             .then(function (result) {
@@ -34,7 +34,7 @@
 
     $scope.populateCustomerList();
 
-    $scope.productList = [];
+    
     $scope.populateProductList = function () {
         $http.get("api/product/")
             .then(function (result) {
