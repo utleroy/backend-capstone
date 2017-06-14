@@ -16,7 +16,7 @@ namespace lee_hankins_backend_capstone.Models
         public string colorBackImage { get; set; }
         public string sizeName { get; set; }
         public int unitWeight { get; set; }
-        public int salePrice { get; set; }
+        public decimal salePrice { get; set; }
         public int customerPrice { get; set; }
         public int qty { get; set; }
     }

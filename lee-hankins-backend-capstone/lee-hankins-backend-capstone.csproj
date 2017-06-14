@@ -320,6 +320,10 @@
     <Compile Include="Migrations\201706101822355_firstCustomerMigration1.Designer.cs">
       <DependentUpon>201706101822355_firstCustomerMigration1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706140455475_productupdate.cs" />
+    <Compile Include="Migrations\201706140455475_productupdate.Designer.cs">
+      <DependentUpon>201706140455475_productupdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -444,6 +448,7 @@
     <Content Include="app\controllers\customerController.js" />
     <Content Include="app\controllers\homeController.js" />
     <Content Include="app\controllers\loginController.js" />
+    <Content Include="app\controllers\orderController.js" />
     <Content Include="app\controllers\signupController.js" />
     <Content Include="app\html\addNewOrder.html" />
     <Content Include="app\html\customerView.html" />
@@ -562,6 +567,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706101822355_firstCustomerMigration1.resx">
       <DependentUpon>201706101822355_firstCustomerMigration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706140455475_productupdate.resx">
+      <DependentUpon>201706140455475_productupdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
