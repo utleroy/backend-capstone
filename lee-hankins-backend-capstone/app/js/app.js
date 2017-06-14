@@ -24,8 +24,9 @@ app.config(["$routeProvider", function ($routeProvider) {
     })
     .when("/new-order", {
         templateUrl: "app/html/addNewOrder.html",
-        controller: "homeController"
+        controller: "orderController"
     })
+   
             
 }
 ])

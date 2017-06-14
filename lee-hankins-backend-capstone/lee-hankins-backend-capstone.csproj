@@ -448,6 +448,7 @@
     <Content Include="app\controllers\customerController.js" />
     <Content Include="app\controllers\homeController.js" />
     <Content Include="app\controllers\loginController.js" />
+    <Content Include="app\controllers\orderController.js" />
     <Content Include="app\controllers\signupController.js" />
     <Content Include="app\html\addNewOrder.html" />
     <Content Include="app\html\customerView.html" />
