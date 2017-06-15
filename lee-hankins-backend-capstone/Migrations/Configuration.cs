@@ -28,11 +28,11 @@ namespace lee_hankins_backend_capstone.Migrations
             );
 
 
-            context.Product.AddRange(new[]
-            {
-                  new Product { styleName = "shirt" }
-                }
-            );
+            //context.Product.AddRange(new[]
+            //{
+            //      new Product { styleName = "shirt" }
+            //    }
+            //);
 
             
 

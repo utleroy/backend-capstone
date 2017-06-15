@@ -13,12 +13,12 @@ namespace lee_hankins_backend_capstone.Controllers
     public class ProductRepository
     {
 
-        readonly ApplicationDbContext _context;
+        //readonly ApplicationDbContext _context;
         private IRestClient _restClient;
 
-        public ProductRepository(ApplicationDbContext context, IRestClient restClient)
+        public ProductRepository(IRestClient restClient)
         {
-            _context = context;
+            //_context = context;
             _restClient = restClient;
 
         }
@@ -26,7 +26,7 @@ namespace lee_hankins_backend_capstone.Controllers
         
         public Product Get(int id)
         {
-            return _context.Product.Find(id);
+            return null;
         }
 
         public IEnumerable<Product> GetAll()
@@ -34,7 +34,7 @@ namespace lee_hankins_backend_capstone.Controllers
             _restClient.Authenticator = new HttpBasicAuthenticator("77205", "19ca413e-38eb-4f90-b617-c06737464fc7");
 
             var request = new RestRequest();
-            request.Resource = "/v2/products/?style=39";
+            request.Resource = "/v2/styles/?filter=BrandName,StyleId,SalePrice";
 
             var response = _restClient.Get<List<Product>>(request);
 

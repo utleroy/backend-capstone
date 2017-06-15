@@ -38,7 +38,7 @@
                         </td>
                         <td>
                             <div class="form-group">
-                                <select class="form-control" ng-model="ProductStyle.selected" ng-options="item.brandName + ' ' + item.styleName + ' ' + item.salePrice for item in productList">
+                                <select class="form-control" ng-model="ProductStyle.selected" ng-options="item.brandName + ' ' + item.styleName for item in productList">
                                     <option value="" label="Style"></option>
                                 </select>
                             </div>
@@ -78,7 +78,7 @@
                                 </div>
                             </form>
                         </td>
-                        <td><strong>$22.00</strong></td>
+                        <td><strong>({{ProductStyle.selected.salePrice}}</strong></td>
                     </tr>
                     <tr>
                         <td>

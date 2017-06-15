@@ -7,13 +7,13 @@ namespace lee_hankins_backend_capstone.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class productupdate : IMigrationMetadata
+    public sealed partial class removeProduct : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(productupdate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(removeProduct));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706140455475_productupdate"; }
+            get { return "201706150243218_removeProduct"; }
         }
         
         string IMigrationMetadata.Source
