@@ -23,10 +23,19 @@ namespace lee_hankins_backend_capstone.Controllers
         }
 
         // GET: api/Product/5
-        public string Get(int id)
-        {
-            return "value";
-        }
+        //public string Get(int id)
+        //{
+        //    return _productRepository.Get(int id);
+        //}
+
+        //[HttpGet]
+        ////[Route("{id}")]
+        //public Product Get([FromUri]int value)
+        //{
+        //    //var product = _productRepository.Get(id);
+
+        //    return _productRepository.GetPrice(value);
+        //}
 
         // POST: api/Product
         public void Post([FromBody]string value)
