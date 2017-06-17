@@ -23,7 +23,7 @@ namespace lee_hankins_backend_capstone.Controllers
 
         internal IEnumerable<LineItem> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.LineItem;
         }
     }
 }

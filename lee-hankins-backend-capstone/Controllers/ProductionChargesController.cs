@@ -1,4 +1,5 @@
-﻿using System;
+﻿using lee_hankins_backend_capstone.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,10 +10,16 @@ namespace lee_hankins_backend_capstone.Controllers
 {
     public class ProductionChargesController : ApiController
     {
-        // GET: api/ProductionCharges
-        public IEnumerable<string> Get()
+        private ProductionChargesRepository _productionChargesRepository;
+
+        public ProductionChargesController(ProductionChargesRepository productionChargesRepository)
         {
-            return new string[] { "value1", "value2" };
+            _productionChargesRepository = productionChargesRepository;
+        }
+        // GET: api/ProductionCharges
+        public IEnumerable<ProductionCharges> Get()
+        {
+            return _productionChargesRepository.GetAll();
         }
 
         // GET: api/ProductionCharges/5

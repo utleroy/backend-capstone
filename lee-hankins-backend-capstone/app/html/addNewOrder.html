@@ -37,7 +37,7 @@
                 <tr>
                     <td>
                         <div class="form-group">
-                            <select class="form-control" ng-model="ProductStyle.selected" ng-options="item.brandName + ' ' + item.styleName for item in productList">
+                            <select class="form-control" ng-model="ProductSelected" ng-options="item.brandName + ' ' + item.styleName for item in productList">
                                 <option label="Style"></option>
                             </select>
                         </div>
@@ -68,64 +68,42 @@
                         </div>
                     </td>-->
                     <td>
-                        <input type="text" class="form-control" value="" ng-model="userValue">
+                        <input type="text" class="form-control" value="" ng-model="quantity">
                     </td>
-                    <td>{{ProductStyle.selected.salePrice}}</td>
+                    <td>{{ProductSelected.salePrice}}</td>
                     <td>
-                        <input type="text" class="form-control" value="" ng-model="userValuePrintCharges">
+                        <div class="form-group">
+                            <select class="form-control" ng-model="PrintChargesSelected" ng-options="item.ColorNumber for item in printChargeList">
+                                <option label="How Many Colors"></option>
+                            </select>
+                        </div>
                     </td>
-                    <td ng-model="printCalculated">
-                        {{userValuePrintCharges * 1.27}}
+                    <td >
+                        {{PrintChargesSelected.NumberPrice}}
                     </td>
                     <td>
-                        {{(ProductStyle.selected.salePrice * userValue) + (userValuePrintCharges * 1.27 * userValue)}}
+                        {{(ProductSelected.salePrice * quantity) + (PrintChargesSelected.NumberPrice * quantity)}}
                     </td>
                 </tr>
             </tbody>
         </table>
         <!--add line item btn-->
-        <hr>
+            <hr>
         <div class="row">
             <div class="col-sm-4">
 
             </div>
             <div class="col-sm-8">
-                <button type="button" class="pull-right" cursor inherit;">Add Line Item</button>
+                <button type="button" class="pull-right" ng-click="createLineItemData()">Add Line Item</button>
             </div>
         </div>
         <hr>
         <!--detailed line item totals-->
         <div class="row">
             <div class="col-md-5 col-sm-6 col-xs-12">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Shirt Style</th>
-                                    <th>Size</th>
-                                    <th>Color</th>
-                                    <th>Quanity</th>
-                                    <th>Price per</th>
-                                    <th>Line Total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><div>{{ProductStyle.selected.brandName}}</div></td>
-                                    <td><div>Med</div></td>
-                                    <td><div>{{chosenColor}}</div></td>
-                                    <td><div>{{userValue}}</div></td>
-                                    <td><div>$2.50</div></td>
-                                    <td><div>$5.70</div></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="col-sm-6">
 
-                    </div>
-                </div>
+                <!--detailed line item totals go here-->
+                
             </div>
             <div class="col-md-5 col-md-offset-2 col-sm-6 col-xs-12">
                 <h3>Cart Totals:</h3>

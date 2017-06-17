@@ -7,6 +7,7 @@
         Email: ""
     }
 
+
     $http.get("/api/customer")
     .then(function (result) {
         $scope.customers = result.data;
@@ -14,7 +15,6 @@
     
 
     $scope.addCustomer = function () {
-        console.log("test click", $scope.newCustomer);
         $http.post("/api/customer", $scope.newCustomer)
         .then(function (result) {
             $location.path("new-order");

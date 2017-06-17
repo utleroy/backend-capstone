@@ -9,6 +9,8 @@ namespace lee_hankins_backend_capstone.Models
     {
         public int LineItemId { get; set; }
         public int OrderId { get; set; }
+        public string ProductSelected { get; set; }
+        
 
     }
 }

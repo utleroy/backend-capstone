@@ -296,6 +296,14 @@
     <Compile Include="Migrations\201706171327233_initial-migration.Designer.cs">
       <DependentUpon>201706171327233_initial-migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706171430446_charges-seed.cs" />
+    <Compile Include="Migrations\201706171430446_charges-seed.Designer.cs">
+      <DependentUpon>201706171430446_charges-seed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706171552576_lineItem.cs" />
+    <Compile Include="Migrations\201706171552576_lineItem.Designer.cs">
+      <DependentUpon>201706171552576_lineItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -521,6 +529,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201706171327233_initial-migration.resx">
       <DependentUpon>201706171327233_initial-migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706171430446_charges-seed.resx">
+      <DependentUpon>201706171430446_charges-seed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706171552576_lineItem.resx">
+      <DependentUpon>201706171552576_lineItem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
