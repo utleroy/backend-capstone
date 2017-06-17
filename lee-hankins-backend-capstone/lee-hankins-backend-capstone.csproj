@@ -292,37 +292,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706060128141_firstCustomerMigration.cs" />
-    <Compile Include="Migrations\201706060128141_firstCustomerMigration.Designer.cs">
-      <DependentUpon>201706060128141_firstCustomerMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706060408361_firstProductMigration.cs" />
-    <Compile Include="Migrations\201706060408361_firstProductMigration.Designer.cs">
-      <DependentUpon>201706060408361_firstProductMigration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706080059133_ProductionCharges.cs" />
-    <Compile Include="Migrations\201706080059133_ProductionCharges.Designer.cs">
-      <DependentUpon>201706080059133_ProductionCharges.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706080111468_ProductionCharges1.cs" />
-    <Compile Include="Migrations\201706080111468_ProductionCharges1.Designer.cs">
-      <DependentUpon>201706080111468_ProductionCharges1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706100128014_firstLineItemDb.cs" />
-    <Compile Include="Migrations\201706100128014_firstLineItemDb.Designer.cs">
-      <DependentUpon>201706100128014_firstLineItemDb.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706100137107_firstLineItemDb1.cs" />
-    <Compile Include="Migrations\201706100137107_firstLineItemDb1.Designer.cs">
-      <DependentUpon>201706100137107_firstLineItemDb1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706101822355_firstCustomerMigration1.cs" />
-    <Compile Include="Migrations\201706101822355_firstCustomerMigration1.Designer.cs">
-      <DependentUpon>201706101822355_firstCustomerMigration1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706150243218_removeProduct.cs" />
-    <Compile Include="Migrations\201706150243218_removeProduct.Designer.cs">
-      <DependentUpon>201706150243218_removeProduct.cs</DependentUpon>
+    <Compile Include="Migrations\201706171327233_initial-migration.cs" />
+    <Compile Include="Migrations\201706171327233_initial-migration.Designer.cs">
+      <DependentUpon>201706171327233_initial-migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -547,29 +519,8 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706060128141_firstCustomerMigration.resx">
-      <DependentUpon>201706060128141_firstCustomerMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706060408361_firstProductMigration.resx">
-      <DependentUpon>201706060408361_firstProductMigration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706080059133_ProductionCharges.resx">
-      <DependentUpon>201706080059133_ProductionCharges.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706080111468_ProductionCharges1.resx">
-      <DependentUpon>201706080111468_ProductionCharges1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706100128014_firstLineItemDb.resx">
-      <DependentUpon>201706100128014_firstLineItemDb.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706100137107_firstLineItemDb1.resx">
-      <DependentUpon>201706100137107_firstLineItemDb1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706101822355_firstCustomerMigration1.resx">
-      <DependentUpon>201706101822355_firstCustomerMigration1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706150243218_removeProduct.resx">
-      <DependentUpon>201706150243218_removeProduct.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706171327233_initial-migration.resx">
+      <DependentUpon>201706171327233_initial-migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

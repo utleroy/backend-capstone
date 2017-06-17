@@ -1,4 +1,4 @@
-﻿using lee_hankins_backend_capstone.Migrations;
+﻿
 using lee_hankins_backend_capstone.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Newtonsoft.Json;

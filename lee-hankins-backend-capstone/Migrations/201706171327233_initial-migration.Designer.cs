@@ -7,13 +7,13 @@ namespace lee_hankins_backend_capstone.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class firstLineItemDb1 : IMigrationMetadata
+    public sealed partial class initialmigration : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(firstLineItemDb1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initialmigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706100137107_firstLineItemDb1"; }
+            get { return "201706171327233_initial-migration"; }
         }
         
         string IMigrationMetadata.Source
