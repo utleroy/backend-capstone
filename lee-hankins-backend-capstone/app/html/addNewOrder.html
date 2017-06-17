@@ -1,140 +1,152 @@
 ﻿<div class="container">
     <div class="row">
         <div class="col-md-offset-4">
+            <!--cutomer dropdown menu-->
             <div class="form-group">
-            <select class="form-control" ng-model="Customer.selected" ng-options="item.FirstName + ' ' +  item.LastName for item in customerList">
-                <option value="" label="Select Customer for New Order"></option>
-            </select>
+                <select class="form-control" ng-model="Customer.selected" ng-options="item.FirstName + ' ' +  item.LastName for item in customerList">
+                    <option value="" label="Select Customer for New Order"></option>
+                </select>
             </div>
             <br />
+            <!--display selected customer-->
             <div><h5>New Order For: </h5><H3>{{Customer.selected.FirstName}} {{Customer.selected.LastName}}</H3></div>
             <hr />
         </div>
-        </div>
     </div>
+</div>
 
-    <div class="container">
+<div class="container">
+    <div class="row">
+        <!--line item table-->
+        <table>
+            <!--add line item table header-->
+            <thead>
+                <tr>
+                    <th>product</th>
+                    <!--<th>color</th>
+                    <th>size</th>-->
+                    <th>quanity</th>
+                    <th>shirt price</th>
+                    <th>how many colors</th>
+                    <th>imprint price</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <!--add line item table body-->
+            <tbody>
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            <select class="form-control" ng-model="ProductStyle.selected" ng-options="item.brandName + ' ' + item.styleName for item in productList">
+                                <option label="Style"></option>
+                            </select>
+                        </div>
+                    </td>
+                    <!--size and color dropdown menus to add later-->
+                    <!--<td>
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option value="" label="Color"></option>
+                                <option value="" label="Blue"></option>
+                                <option value="" label="Black"></option>
+                                <option value="" label="White"></option>
+                                <option value="" label="Grey"></option>
+                            </select>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option value="" label="Size"></option>
+                                <option value="" label="S"></option>
+                                <option value="" label="M"></option>
+                                <option value="" label="L"></option>
+                                <option value="" label="XL"></option>
+                                <option value="" label="XXL"></option>
+                            </select>
+                        </div>
+                    </td>-->
+                    <td>
+                        <input type="text" class="form-control" value="" ng-model="userValue">
+                    </td>
+                    <td>{{ProductStyle.selected.salePrice}}</td>
+                    <td>
+                        <input type="text" class="form-control" value="" ng-model="userValuePrintCharges">
+                    </td>
+                    <td ng-model="printCalculated">
+                        {{userValuePrintCharges * 1.27}}
+                    </td>
+                    <td>
+                        {{(ProductStyle.selected.salePrice * userValue) + (userValuePrintCharges * 1.27 * userValue)}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!--add line item btn-->
+        <hr>
         <div class="row">
+            <div class="col-sm-4">
 
-            <table class="table table-striped table-hover cart-table">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>PRODUCT</th>
-                        <th>COLOR</th>
-                        <th>SIZE</th>
-                        <th>GARMENT PRICE</th>
-                        <th># PRINT COLORS</th>
-                        <th>PRINT CHARGES</th>
-                        <th>QUANTITY</th>
-                        <!--<th># OF COLORS</th>-->
-                        <th>TOTAL</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            <a href="#" class="remove" title="Remove this item" data-toggle="tooltip" data-placement="top"><i class="fa fa-trash"></i></a>
-                        </td>
-                        <td>
-                            <div class="form-group">
-                                <select class="form-control" ng-model="ProductStyle.selected" ng-options="item.brandName + ' ' + item.styleName + ' ' + item.salePrice for item in productList">
-                                    <option value="" label="Style"></option>
-                                </select>
-                            </div>
-                        </td>
-                        <td>
-                            <div class="form-group">
-                                <select class="form-control" ng-model="ProductColor.display" ng-options="item.colorName for item in productList">
-                                    <option value="" label="Color"></option>
-                                </select>
-                            </div>
-                        </td>
-
-                        <td>
-                            <div class="form-group">
-                                <select class="form-control" ng-model="SizeName.selected" ng-options="item.sizeName for item in productList">
-                                    <option value="" label="Size"></option>
-                                </select>
-                            </div>
-
-                        </td>
-                        <td>{{ProductStyle.selected.salePrice}}</td>
-                        <td>5 Colors</td>
-                        <td>3.60</td>
-                        <td>
-                            <form class="form-inline">
-                                <div class="form-group">
-                                    <label class="sr-only" for="exampleInputAmount">Quantity</label>
-                                    <div class="input-group">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default" type="button" data-selector="a.btn, button.btn" style="outline: none; cursor: inherit;">-</button>
-                                        </span>
-                                        <input type="text" class="form-control" id="quantity" placeholder="1">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default" type="button" data-selector="a.btn, button.btn" style="outline: none; cursor: inherit;">+</button>
-                                        </span>
-                                    </div>
-                                </div>
-                            </form>
-                        </td>
-                        <td><strong>$22.00</strong></td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="#" class="remove" title="Remove this item" data-toggle="tooltip" data-placement="top"><i class="fa fa-trash"></i></a>
-                        </td>
-                        
-                    </tr>
-                </tbody>
-            </table>
-
-            <hr>
-
-            <div class="row">
-                <div class="col-sm-4">
-                   
-                </div>
-                <div class="col-sm-8">
-                    <button type="button" class="btn btn-primary pull-right" data-selector="a.btn, button.btn" style="outline: none; cursor: inherit;">Update Cart</button>
-                </div>
             </div>
+            <div class="col-sm-8">
+                <button type="button" class="pull-right" cursor inherit;">Add Line Item</button>
+            </div>
+        </div>
+        <hr>
+        <!--detailed line item totals-->
+        <div class="row">
+            <div class="col-md-5 col-sm-6 col-xs-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Shirt Style</th>
+                                    <th>Size</th>
+                                    <th>Color</th>
+                                    <th>Quanity</th>
+                                    <th>Price per</th>
+                                    <th>Line Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div>{{ProductStyle.selected.brandName}}</div></td>
+                                    <td><div>Med</div></td>
+                                    <td><div>{{chosenColor}}</div></td>
+                                    <td><div>{{userValue}}</div></td>
+                                    <td><div>$2.50</div></td>
+                                    <td><div>$5.70</div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-sm-6">
 
-            <hr>
-
-            <div class="row">
-                <div class="col-md-5 col-sm-6 col-xs-12">
-                   
-                    <div class="row">
-                        <div class="col-sm-6">
-                            
-                        </div>
-                        <div class="col-sm-6">
-                            
-                        </div>
                     </div>
                 </div>
-                <div class="col-md-5 col-md-offset-2 col-sm-6 col-xs-12">
-                    <h3>Cart Totals:</h3>
-                    <table class="table table-striped table-hover cart-table">
-                        <tbody>
-                            <tr>
-                                <td><strong>Cart Subtotal</strong></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td><strong>Setup Charges</strong></td>
-                                <td></td>
-                            </tr>
-                            <tr class="big-total">
-                                <td><strong>Total</strong></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
             </div>
-
+            <div class="col-md-5 col-md-offset-2 col-sm-6 col-xs-12">
+                <h3>Cart Totals:</h3>
+                <table class="table table-striped table-hover cart-table">
+                    <tbody>
+                        <tr>
+                            <td><strong>Cart Subtotal</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Setup Charges</strong></td>
+                            <td></td>
+                        </tr>
+                        <tr class="big-total">
+                            <td><strong>Total</strong></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
+</div>
 

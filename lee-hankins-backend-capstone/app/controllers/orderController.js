@@ -18,4 +18,17 @@
             });
     };
     $scope.populateProductList();
+
+    $scope.sizes = ["S,M,L,XL,XXL"];
+
+    $scope.userValue = "";
+    $scope.userValuePrintCharges = "";
+
+    $scope.printCharges = {
+        1: 1.10,
+        2: 1.90,
+        3: 2.20
+    };
+
+    
 }]);
