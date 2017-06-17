@@ -1,16 +1,15 @@
 ﻿app.controller("orderController", ["$scope", "$location", "$http", function ($scope, $location, $http) {
 
-    //gets customer list from Db to populate
+    //gets customer list from Db to populate dropdown
     $scope.populateCustomerList = function () {
         $http.get("api/customer/")
             .then(function (result) {
                 $scope.customerList = result.data;
             });
     };
-
     $scope.populateCustomerList();
 
-    //gets product list from Db to populate
+    //gets product list from Db to populate dropdown
     $scope.populateProductList = function () {
         $http.get("api/product/")
             .then(function (result) {
@@ -19,16 +18,41 @@
     };
     $scope.populateProductList();
 
-    $scope.sizes = ["S,M,L,XL,XXL"];
-
-    $scope.userValue = "";
-    $scope.userValuePrintCharges = "";
-
-    $scope.printCharges = {
-        1: 1.10,
-        2: 1.90,
-        3: 2.20
+    $scope.printCharge = function () {
+        $http.get("api/productioncharges/")
+        .then(function (result) {
+            $scope.printChargeList = result.data;
+        });
     };
+    $scope.printCharge();
 
+    $scope.quantity = "";
+    $scope.TotalCharges = function () {
+        if ($scope.ProductSelected == null || $scope.PrintChargesSelected == null) {
+            return 0;
+        }
+        return ($scope.ProductSelected.salePrice * $scope.quantity) + ($scope.PrintChargesSelected.NumberPrice * $scope.quantity)
+    };
     
-}]);
+
+    $scope.lineItems = [];
+    $scope.createLineItemData = function () {
+        var lineItem = {
+            quantity : $scope.quantity,
+            product: $scope.ProductSelected.brandName,
+            imprintPrice: $scope.PrintChargesSelected.NumberPrice,
+            shirtPrice: $scope.ProductSelected.salePrice,
+            imprintTotal: $scope.PrintChargesSelected.NumberPrice,
+            lineTotal: $scope.TotalCharges()
+        }
+        $http.post("api/lineitem", lineItem)
+            .then (function () {
+            $http.get("api/lineitem", lineItem)
+            .then(function (result) {
+                $scope.lineItems = result.data;
+            });
+        })
+        //get line items and stuff them into the scopew variables
+    }
+    
+}]);  

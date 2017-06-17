@@ -296,6 +296,22 @@
     <Compile Include="Migrations\201706171327233_initial-migration.Designer.cs">
       <DependentUpon>201706171327233_initial-migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706171430446_charges-seed.cs" />
+    <Compile Include="Migrations\201706171430446_charges-seed.Designer.cs">
+      <DependentUpon>201706171430446_charges-seed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706171552576_lineItem.cs" />
+    <Compile Include="Migrations\201706171552576_lineItem.Designer.cs">
+      <DependentUpon>201706171552576_lineItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706171642540_newLineItems.cs" />
+    <Compile Include="Migrations\201706171642540_newLineItems.Designer.cs">
+      <DependentUpon>201706171642540_newLineItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706171700256_newLineItems1.cs" />
+    <Compile Include="Migrations\201706171700256_newLineItems1.Designer.cs">
+      <DependentUpon>201706171700256_newLineItems1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -521,6 +537,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201706171327233_initial-migration.resx">
       <DependentUpon>201706171327233_initial-migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706171430446_charges-seed.resx">
+      <DependentUpon>201706171430446_charges-seed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706171552576_lineItem.resx">
+      <DependentUpon>201706171552576_lineItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706171642540_newLineItems.resx">
+      <DependentUpon>201706171642540_newLineItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706171700256_newLineItems1.resx">
+      <DependentUpon>201706171700256_newLineItems1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

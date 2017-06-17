@@ -1,5 +1,6 @@
 namespace lee_hankins_backend_capstone.Migrations
 {
+    using Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -26,6 +27,7 @@ namespace lee_hankins_backend_capstone.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            
         }
     }
 }
