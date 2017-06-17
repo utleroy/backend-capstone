@@ -100,7 +100,7 @@
         <hr>
         <!--detailed line item totals-->
         <div><h5>New Order For: </h5><H3>{{Customer.selected.FirstName}} {{Customer.selected.LastName}}</H3></div>
-        <table class="table" ng-repeat="lineitem in lineItems">
+        <table class="table">
             <thead>
                 <tr>
                     <th>edit</th>
@@ -113,7 +113,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr ng-repeat="lineitem in lineItems">
                     <td>
                         <a href="" ng-click="delete(lineitem)" class="remove" title="Remove this item" data-toggle="tooltip" data-placement="top"><i class="fa fa-trash"></i>delete</a> |
                         <a href="" ng-click="edit(lineitem)" class="remove" title="Remove this item" data-toggle="tooltip" data-placement="top"><i class="fa fa-trash"></i>edit</a>
@@ -122,7 +122,7 @@
                     <td>{{lineitem.shirtPrice}}</td>
                     <td>{{lineitem.imprintTotal}}</td>
                     <td>{{lineitem.imprintPrice}}</td>
-                    <td>{{kineitem.lineTotal}}</td>
+                    <td>{{lineitem.lineTotal}}</td>
                     <td>{{lineitem.quantity}}</td>
                 </tr>
             </tbody>
