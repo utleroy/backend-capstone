@@ -7,13 +7,13 @@ namespace lee_hankins_backend_capstone.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class ProductionCharges : IMigrationMetadata
+    public sealed partial class PrintCharges : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ProductionCharges));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(PrintCharges));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706080059133_ProductionCharges"; }
+            get { return "201706170448071_PrintCharges"; }
         }
         
         string IMigrationMetadata.Source

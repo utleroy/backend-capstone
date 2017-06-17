@@ -37,7 +37,7 @@
                 <tr>
                     <td>
                         <div class="form-group">
-                            <select class="form-control" ng-model="ProductStyle.selected" ng-options="item.brandName + ' ' + item.styleName for item in productList">
+                            <select class="form-control" ng-model="ProductStyle" ng-options="item.brandName + ' ' + item.styleName for item in productList">
                                 <option label="Style"></option>
                             </select>
                         </div>
@@ -70,15 +70,20 @@
                     <td>
                         <input type="text" class="form-control" value="" ng-model="userValue">
                     </td>
-                    <td>{{ProductStyle.selected.salePrice}}</td>
+                    <td>{{ProductStyle.salePrice}}</td>
                     <td>
-                        <input type="text" class="form-control" value="" ng-model="userValuePrintCharges">
-                    </td>
-                    <td ng-model="printCalculated">
-                        {{userValuePrintCharges * 1.27}}
+                        <div class="form-group">
+                            <select class="form-control" ng-model="ImprintNum" ng-options="item.ProductionCharges for item in printcharges">
+                                <option label="select"></option>
+                            </select>
+                           
+                        </div>
                     </td>
                     <td>
-                        {{(ProductStyle.selected.salePrice * userValue) + (userValuePrintCharges * 1.27 * userValue)}}
+                        {{userValue * ImprintNum.OneColor}}
+                    </td>
+                    <td>
+                        {{(ProductStyle.salePrice * userValue) + (ImprintNum.OneColor * userValue)}}
                     </td>
                 </tr>
             </tbody>

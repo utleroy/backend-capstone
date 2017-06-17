@@ -6,6 +6,7 @@ namespace lee_hankins_backend_capstone.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
+
     internal sealed class Configuration : DbMigrationsConfiguration<lee_hankins_backend_capstone.Models.ApplicationDbContext>
     {
         public Configuration()
@@ -20,24 +21,7 @@ namespace lee_hankins_backend_capstone.Migrations
             //You can use the DbSet<T>.AddOrUpdate() helper extension method
             //to avoid creating duplicate seed data.E.g.
 
-            context.Customer.AddRange(new[] {
-                new Customer { FirstName = "Lee", LastName = "Hankins", Email = "bryanlhankins@gmail.com", DateActive = DateTime.Now },
-                new Customer { FirstName = "John", LastName = "Brown", Email = "blah@blah.com", DateActive = DateTime.Now },
-                new Customer { FirstName = "Mary", LastName = "Black", Email = "whah@whah.com", DateActive = DateTime.Now }
-                }
-            );
 
-
-            //context.Product.AddRange(new[]
-            //{
-            //      new Product { styleName = "shirt" }
-            //    }
-            //);
-
-            
-
-
-          
 
         }
     }

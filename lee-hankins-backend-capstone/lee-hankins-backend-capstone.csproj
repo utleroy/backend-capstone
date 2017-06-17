@@ -300,14 +300,6 @@
     <Compile Include="Migrations\201706060408361_firstProductMigration.Designer.cs">
       <DependentUpon>201706060408361_firstProductMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706080059133_ProductionCharges.cs" />
-    <Compile Include="Migrations\201706080059133_ProductionCharges.Designer.cs">
-      <DependentUpon>201706080059133_ProductionCharges.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706080111468_ProductionCharges1.cs" />
-    <Compile Include="Migrations\201706080111468_ProductionCharges1.Designer.cs">
-      <DependentUpon>201706080111468_ProductionCharges1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\201706100128014_firstLineItemDb.cs" />
     <Compile Include="Migrations\201706100128014_firstLineItemDb.Designer.cs">
       <DependentUpon>201706100128014_firstLineItemDb.cs</DependentUpon>
@@ -324,11 +316,19 @@
     <Compile Include="Migrations\201706150243218_removeProduct.Designer.cs">
       <DependentUpon>201706150243218_removeProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706170442093_ProductionCharge.cs" />
+    <Compile Include="Migrations\201706170442093_ProductionCharge.Designer.cs">
+      <DependentUpon>201706170442093_ProductionCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706170448071_PrintCharges.cs" />
+    <Compile Include="Migrations\201706170448071_PrintCharges.Designer.cs">
+      <DependentUpon>201706170448071_PrintCharges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\LineItem.cs" />
-    <Compile Include="Models\ProductionCharges.cs" />
+    <Compile Include="Models\PrintCharges.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Product.cs" />
@@ -553,12 +553,6 @@
     <EmbeddedResource Include="Migrations\201706060408361_firstProductMigration.resx">
       <DependentUpon>201706060408361_firstProductMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706080059133_ProductionCharges.resx">
-      <DependentUpon>201706080059133_ProductionCharges.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706080111468_ProductionCharges1.resx">
-      <DependentUpon>201706080111468_ProductionCharges1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706100128014_firstLineItemDb.resx">
       <DependentUpon>201706100128014_firstLineItemDb.cs</DependentUpon>
     </EmbeddedResource>
@@ -570,6 +564,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706150243218_removeProduct.resx">
       <DependentUpon>201706150243218_removeProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706170442093_ProductionCharge.resx">
+      <DependentUpon>201706170442093_ProductionCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706170448071_PrintCharges.resx">
+      <DependentUpon>201706170448071_PrintCharges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

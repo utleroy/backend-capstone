@@ -1,14 +1,9 @@
 ﻿app.controller("orderController", ["$scope", "$location", "$http", function ($scope, $location, $http) {
 
-    //gets customer list from Db to populate
-    $scope.populateCustomerList = function () {
-        $http.get("api/customer/")
-            .then(function (result) {
-                $scope.customerList = result.data;
-            });
-    };
+    
+    $scope.userValue = "";
+    $scope.userValuePrintCharges = "";
 
-    $scope.populateCustomerList();
 
     //gets product list from Db to populate
     $scope.populateProductList = function () {
@@ -18,17 +13,13 @@
             });
     };
     $scope.populateProductList();
-
-    $scope.sizes = ["S,M,L,XL,XXL"];
-
-    $scope.userValue = "";
-    $scope.userValuePrintCharges = "";
-
-    $scope.printCharges = {
-        1: 1.10,
-        2: 1.90,
-        3: 2.20
-    };
-
     
+    $scope.printcharges = function () {
+        $http.get("api/productioncharges/")
+        .then(function (result) {
+            $scope.printPriceList = result.data;
+        });
+    };
+    $scope.printcharges();
+
 }]);

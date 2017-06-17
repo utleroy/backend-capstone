@@ -12,27 +12,15 @@ namespace lee_hankins_backend_capstone.Controllers
     public class ProductionChargesRepository
     {
         readonly ApplicationDbContext _context;
-        private ProductionCharges newProductionCharges;
 
         public ProductionChargesRepository(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        public void Save(Models.ProductionCharges newProductonCharges)
+        public IEnumerable<PrintCharges> GetAll()
         {
-            _context.ProductionCharges.Add(newProductionCharges);
-            _context.SaveChanges();
-        }
-
-        public ProductionCharges Get(int id)
-        {
-            return _context.ProductionCharges.Find(id);
-        }
-
-        public IEnumerable<Models.ProductionCharges> GetAll()
-        {
-            return _context.ProductionCharges;
+            return _context.PrintCharges;
         }
 
     }

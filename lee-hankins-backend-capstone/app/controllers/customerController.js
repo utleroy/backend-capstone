@@ -28,4 +28,5 @@
                 $scope.customers = result.data;
             });
     }
+
 }])
