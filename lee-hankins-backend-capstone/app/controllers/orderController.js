@@ -36,6 +36,12 @@
     
 
     $scope.lineItems = [];
+
+    $http.get("/api/lineitem")
+    .then(function (result) {
+        $scope.lineItems = result.data;
+    });
+
     $scope.createLineItemData = function () {
         var lineItem = {
             quantity : $scope.quantity,
@@ -45,14 +51,22 @@
             imprintTotal: $scope.PrintChargesSelected.NumberPrice,
             lineTotal: $scope.TotalCharges()
         }
-        $http.post("api/lineitem", lineItem)
+        $http.post("/api/lineitem", lineItem)
             .then (function () {
-            $http.get("api/lineitem", lineItem)
+            $http.get("/api/lineitem", lineItem)
             .then(function (result) {
                 $scope.lineItems = result.data;
             });
         })
-        //get line items and stuff them into the scopew variables
+        
+    }
+
+    $scope.delete = function (lineitem) {
+        $http.delete("api/lineitem/" + lineitem.LineItemId);
+        $http.get("/api/lineitem")
+            .then(function (result) {
+                $scope.lineItems = result.data;
+            });
     }
     
 }]);  

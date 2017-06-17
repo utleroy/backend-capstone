@@ -9,7 +9,6 @@
             </div>
             <br />
             <!--display selected customer-->
-            <div><h5>New Order For: </h5><H3>{{Customer.selected.FirstName}} {{Customer.selected.LastName}}</H3></div>
             <hr />
         </div>
     </div>
@@ -100,10 +99,11 @@
         </div>
         <hr>
         <!--detailed line item totals-->
-        <table class="table" ng-repeat="item in lineItems">
+        <div><h5>New Order For: </h5><H3>{{Customer.selected.FirstName}} {{Customer.selected.LastName}}</H3></div>
+        <table class="table" ng-repeat="lineitem in lineItems">
             <thead>
                 <tr>
-                    <!--<th>#</th>-->
+                    <th>edit</th>
                     <th>Product Style</th>
                     <th>Unit Price</th>
                     <th># of Imprint Colors</th>
@@ -114,13 +114,16 @@
             </thead>
             <tbody>
                 <tr>
-                    <!--<th scope="row">1</th>-->
-                    <td>{{item.product}}</td>
-                    <td>{{item.shirtPrice}}</td>
-                    <td>{{item.imprintTotal}}</td>
-                    <td>{{item.imprintPrice}}</td>
-                    <td>{{item.lineTotal}}</td>
-                    <td>{{item.quantity}}</td>
+                    <td>
+                        <a href="" ng-click="delete(lineitem)" class="remove" title="Remove this item" data-toggle="tooltip" data-placement="top"><i class="fa fa-trash"></i>delete</a> |
+                        <a href="" ng-click="edit(lineitem)" class="remove" title="Remove this item" data-toggle="tooltip" data-placement="top"><i class="fa fa-trash"></i>edit</a>
+                    </td>
+                    <td>{{lineitem.product}}</td>
+                    <td>{{lineitem.shirtPrice}}</td>
+                    <td>{{lineitem.imprintTotal}}</td>
+                    <td>{{lineitem.imprintPrice}}</td>
+                    <td>{{kineitem.lineTotal}}</td>
+                    <td>{{lineitem.quantity}}</td>
                 </tr>
             </tbody>
         </table>
