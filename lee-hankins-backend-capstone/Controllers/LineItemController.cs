@@ -29,8 +29,9 @@ namespace lee_hankins_backend_capstone.Controllers
         }
 
         // POST: api/LineItem
-        public void Post([FromBody]string value)
+        public void Post(LineItem newLineItem)
         {
+            _lineItemRepository.Save(newLineItem);
         }
 
         // PUT: api/LineItem/5

@@ -27,19 +27,32 @@
     $scope.printCharge();
 
     $scope.quantity = "";
+    $scope.TotalCharges = function () {
+        if ($scope.ProductSelected == null || $scope.PrintChargesSelected == null) {
+            return 0;
+        }
+        return ($scope.ProductSelected.salePrice * $scope.quantity) + ($scope.PrintChargesSelected.NumberPrice * $scope.quantity)
+    };
     
 
     $scope.lineItems = [];
     $scope.createLineItemData = function () {
         var lineItem = {
             quantity : $scope.quantity,
-            ProductSelected: $scope.ProductSelected,
-            NumberPrice: $scope.NumberPrice
+            product: $scope.ProductSelected.brandName,
+            imprintPrice: $scope.PrintChargesSelected.NumberPrice,
+            shirtPrice: $scope.ProductSelected.salePrice,
+            imprintTotal: $scope.PrintChargesSelected.NumberPrice,
+            lineTotal: $scope.TotalCharges()
         }
-        $http.post("api/lineitem", lineItem);
-        //post to the line item api
+        $http.post("api/lineitem", lineItem)
+            .then (function () {
+            $http.get("api/lineitem", lineItem)
+            .then(function (result) {
+                $scope.lineItems = result.data;
+            });
+        })
         //get line items and stuff them into the scopew variables
     }
-    $scope.createLineItemData();
     
-}]);
+}]);  
