@@ -1,6 +1,7 @@
 ﻿app.controller("customerController", ["$scope", "$http", "$location", function ($scope, $http, $location) {
 
     $scope.customers = [];
+
     $scope.newCustomer = {
         FirstName: "",
         LastName: "",

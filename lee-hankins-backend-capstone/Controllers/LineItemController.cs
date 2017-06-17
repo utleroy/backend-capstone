@@ -42,6 +42,7 @@ namespace lee_hankins_backend_capstone.Controllers
         // DELETE: api/LineItem/5
         public void Delete(int id)
         {
+            _lineItemRepository.Delete(id);
         }
     }
 }
