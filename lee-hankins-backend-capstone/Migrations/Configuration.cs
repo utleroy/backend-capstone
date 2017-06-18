@@ -27,6 +27,10 @@ namespace lee_hankins_backend_capstone.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+            context.Order.AddRange(new[]
+            {
+                new Order { OrderId = 1, CustomerId = 1 }
+            });
             
         }
     }

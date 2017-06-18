@@ -25,9 +25,9 @@ namespace lee_hankins_backend_capstone.Models
     {
 
         public DbSet<Customer> Customer { get; set; }
-        //public DbSet<Product> Product { get; set; }
         public DbSet<ProductionCharges> ProductionCharges { get; set; }
         public DbSet<LineItem> LineItem { get; set; }
+        public DbSet<Order> Order { get; set; }
 
         public ApplicationDbContext()
             : base("RepAssist", throwIfV1Schema: false)
