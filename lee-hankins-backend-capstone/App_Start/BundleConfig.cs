@@ -51,6 +51,7 @@ namespace lee_hankins_backend_capstone
                 "~/app/js/app.js")
                 .IncludeDirectory("~/app/js/", "*.js", true)
                 .IncludeDirectory("~/app/controllers/", "*.js", true)
+                
                 //.IncludeDirectory("~/app/content/css/", "*.css", true)
                 //.IncludeDirectory("~/app/content/js/", "*.js", true)
                 //.IncludeDirectory("~/app/content/fonts/", "*.eot, svg, ttf, woff, otf, ", true)

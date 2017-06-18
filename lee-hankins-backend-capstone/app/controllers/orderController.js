@@ -40,6 +40,7 @@
     $http.get("/api/lineitem")
     .then(function (result) {
         $scope.lineItems = result.data;
+
     });
 
     $scope.createLineItemData = function () {
@@ -68,5 +69,7 @@
                 $scope.lineItems = result.data;
             });
     }
+
+    
     
 }]);  
