@@ -442,7 +442,7 @@
     <Content Include="app\content\js\prettify.js" />
     <Content Include="app\controllers\customerController.js" />
     <Content Include="app\controllers\homeController.js" />
-    <Content Include="app\controllers\estimateController.js" />
+    <Content Include="app\controllers\invoiceController.js" />
     <Content Include="app\controllers\loginController.js" />
     <Content Include="app\controllers\orderController.js" />
     <Content Include="app\controllers\signupController.js" />
@@ -452,7 +452,7 @@
     <Content Include="app\html\login.html" />
     <Content Include="app\html\newCustomer.html" />
     <Content Include="app\html\signup.html" />
-    <Content Include="app\html\estimate.html" />
+    <Content Include="app\html\invoice.html" />
     <Content Include="app\js\app.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
