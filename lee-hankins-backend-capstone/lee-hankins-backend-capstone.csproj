@@ -278,6 +278,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LineItemController.cs" />
     <Compile Include="Controllers\LineItemRepository.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
+    <Compile Include="Controllers\OrderRepository.cs" />
     <Compile Include="Controllers\ProductionChargesController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\ProductionChargesRepository.cs" />
@@ -312,9 +314,14 @@
     <Compile Include="Migrations\201706171700256_newLineItems1.Designer.cs">
       <DependentUpon>201706171700256_newLineItems1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706180119538_InitialOrder.cs" />
+    <Compile Include="Migrations\201706180119538_InitialOrder.Designer.cs">
+      <DependentUpon>201706180119538_InitialOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Order.cs" />
     <Compile Include="Models\LineItem.cs" />
     <Compile Include="Models\ProductionCharges.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -525,7 +532,6 @@
     <Folder Include="app\app_data\" />
     <Folder Include="app\img\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -550,6 +556,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706171700256_newLineItems1.resx">
       <DependentUpon>201706171700256_newLineItems1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706180119538_InitialOrder.resx">
+      <DependentUpon>201706180119538_InitialOrder.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
