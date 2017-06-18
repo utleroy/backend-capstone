@@ -14,20 +14,22 @@ app.config(["$routeProvider", function ($routeProvider) {
             templateUrl: "app/html/home.html",
             controller: "homeController"
         })
-    .when("/customers", {
-        templateUrl: "app/html/customerView.html",
-        controller: "customerController"
-    })
-    .when("/add-customer",{
-        templateUrl: "app/html/newCustomer.html",
-        controller: "customerController"
-    })
-    .when("/new-order", {
-        templateUrl: "app/html/addNewOrder.html",
-        controller: "orderController"
-    })
-   
-            
+        .when("/customers", {
+            templateUrl: "app/html/customerView.html",
+            controller: "customerController"
+        })
+        .when("/add-customer",{
+            templateUrl: "app/html/newCustomer.html",
+            controller: "customerController"
+        })
+        .when("/new-order", {
+            templateUrl: "app/html/addNewOrder.html",
+            controller: "orderController"
+        })
+        .when("/estimate", {
+            templateUrl: "app/html/estimate.html",
+            controller: "estimateController"
+        })
 }
 ])
 app.run(["$http", function ($http) {

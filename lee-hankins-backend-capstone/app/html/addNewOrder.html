@@ -17,7 +17,7 @@
 <div class="container">
     <div class="row">
         <!--line item table-->
-        <table>
+        <table class="table">
             <!--add line item table header-->
             <thead>
                 <tr>
@@ -36,7 +36,7 @@
                 <tr>
                     <td>
                         <div class="form-group">
-                            <select class="form-control" ng-model="ProductSelected" ng-options="item.brandName + ' ' + item.styleName for item in productList">
+                            <select class="" ng-model="ProductSelected" ng-options="item.brandName + ' ' + item.styleName for item in productList">
                                 <option label="Style"></option>
                             </select>
                         </div>
@@ -67,12 +67,12 @@
                         </div>
                     </td>-->
                     <td>
-                        <input type="text" class="form-control" value="" ng-model="quantity">
+                        <input type="text" class="" value="" ng-model="quantity">
                     </td>
                     <td>{{ProductSelected.salePrice}}</td>
                     <td>
                         <div class="form-group">
-                            <select class="form-control" ng-model="PrintChargesSelected" ng-options="item.ColorNumber for item in printChargeList">
+                            <select class="" ng-model="PrintChargesSelected" ng-options="item.ColorNumber for item in printChargeList">
                                 <option label="How Many Colors"></option>
                             </select>
                         </div>
@@ -99,7 +99,7 @@
         </div>
         <hr>
         <!--detailed line item totals-->
-        <div><h5>New Order For: </h5><H3>{{Customer.selected.FirstName}} {{Customer.selected.LastName}}</H3></div>
+        <div><h4>Line Item List</h4></div>
         <table class="table">
             <thead>
                 <tr>
@@ -127,23 +127,25 @@
                 </tr>
             </tbody>
         </table>
-    </div>
-</div>
+        
+        <div class="row">
+            <div class="col-md-8">
 
-<!--<h3>Cart Totals:</h3>
+            </div>
+
+            <div class="col-md-4">
                 <table class="table table-striped table-hover cart-table">
                     <tbody>
                         <tr>
-                            <td><strong>Cart Subtotal</strong></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Setup Charges</strong></td>
-                            <td></td>
-                        </tr>
-                        <tr class="big-total">
-                            <td><strong>Total</strong></td>
-                            <td></td>
+                            <td><strong>Total Dollars</strong></td>
+                            <td><button type="button" class="pull-right" ng-click="createEstimate()">Convert to Estimate</button></td>
                         </tr>
                     </tbody>
-                </table>-->
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
