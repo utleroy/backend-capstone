@@ -26,9 +26,9 @@ app.config(["$routeProvider", function ($routeProvider) {
             templateUrl: "app/html/addNewOrder.html",
             controller: "orderController"
         })
-        .when("/estimate", {
-            templateUrl: "app/html/estimate.html",
-            controller: "estimateController"
+        .when("/order", {
+            templateUrl: "app/html/invoice.html",
+            controller: "orderController"
         })
 }
 ])

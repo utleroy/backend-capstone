@@ -49,7 +49,7 @@
             product: $scope.ProductSelected.brandName,
             imprintPrice: $scope.PrintChargesSelected.NumberPrice,
             shirtPrice: $scope.ProductSelected.salePrice,
-            imprintTotal: $scope.PrintChargesSelected.NumberPrice,
+            imprintTotal: $scope.PrintChargesSelected.ColorNumber,
             lineTotal: $scope.TotalCharges()
         }
         $http.post("/api/lineitem", lineItem)
@@ -69,6 +69,19 @@
                 $scope.lineItems = result.data;
             });
     }
+
+    //$scope.orders = [];
+    //$scope.fillInvoice = [];
+    //$scope.invoiceData = [];
+
+    //$scope.invoiceData = $http.get("/api/order")
+    // .then(function (result) {
+    //     $http.get("/api/lineitem")
+    //        .then(function (result) {
+    //            $scope.orders = result.data;
+
+    //        })
+    // });
 
     
     
