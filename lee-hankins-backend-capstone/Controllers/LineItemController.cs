@@ -11,9 +11,12 @@ namespace lee_hankins_backend_capstone.Controllers
     public class LineItemController : ApiController
     {
         private LineItemRepository _lineItemRepository;
-        public LineItemController(LineItemRepository lineItemRepository)
+        private OrderRepository _orderRepository;
+
+        public LineItemController(LineItemRepository lineItemRepository, OrderRepository orderRepository)
         {
             _lineItemRepository = lineItemRepository;
+            _orderRepository = orderRepository;
         }
         // GET: api/LineItem
         public IEnumerable<LineItem> Get()
@@ -29,8 +32,19 @@ namespace lee_hankins_backend_capstone.Controllers
         }
 
         // POST: api/LineItem
-        public void Post(LineItem newLineItem)
+        public void Post(AddLineItemViewModel lineItem)
         {
+            var newLineItem = new LineItem
+            {
+                imprintPrice = lineItem.imprintPrice,
+                imprintTotal = lineItem.imprintTotal,
+                lineTotal = lineItem.lineTotal,
+                product = lineItem.product,
+                quantity = lineItem.quantity,
+                shirtPrice = lineItem.shirtPrice,
+                Order = _orderRepository.Get(lineItem.orderId)
+            };
+
             _lineItemRepository.Save(newLineItem);
         }
 

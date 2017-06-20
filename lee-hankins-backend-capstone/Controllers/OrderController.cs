@@ -12,10 +12,12 @@ namespace lee_hankins_backend_capstone.Controllers
     {
 
         private OrderRepository _orderRepository;
+        private CustomerRepository _customerRepository;
 
-        public OrderController(OrderRepository orderRepository)
+        public OrderController(OrderRepository orderRepository, CustomerRepository customerRepository)
         {
             _orderRepository = orderRepository;
+            _customerRepository = customerRepository;
         }
         // GET: api/Order
         public IEnumerable<Order> Get()
@@ -30,9 +32,16 @@ namespace lee_hankins_backend_capstone.Controllers
         }
 
         // POST: api/Order
-        public void Post(Order newOrder)
+        public Order Post([FromBody]int customerId)
         {
+            var newOrder = new Order
+            {
+                Customer = _customerRepository.Get(customerId)
+            };
+
             _orderRepository.Save(newOrder);
+
+            return newOrder;
         }
 
         // PUT: api/Order/5
