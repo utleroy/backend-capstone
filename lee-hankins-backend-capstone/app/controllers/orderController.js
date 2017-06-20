@@ -9,6 +9,40 @@
     };
     $scope.populateCustomerList();
 
+    //$scope.CustomerOrder = {};
+
+    $scope.generateOrder = function () {
+        var customerId = $scope.CustomerSelected.CustomerId;
+
+        $http.post("api/order/", customerId)
+        .then(function (result) {
+            var orderId = result.data.OrderId;
+
+            for (var i = 0; i < $scope.lineItems.length; i++) {
+                var lineitem = $scope.lineItems[i];
+                lineitem.orderId = orderId;
+                $http.post("/api/lineitem", lineitem);
+
+            }
+
+        })
+
+        //$http.get("/api/customer")
+        //    .then(function (result) {
+        //        $scope.customers = result.data;
+        //    });
+
+        //$http.get("api/order/")
+        //.then(function (result) {
+        //    $scope.customerOrder = result.data;
+        //    $scope.CustomerSelected = function () {
+        //        $scope.lineItems = $scope.customerOrder;
+        //        console.log("clicked");
+        //    }
+        //});
+
+    }
+
     //gets product list from Db to populate dropdown
     $scope.populateProductList = function () {
         $http.get("api/product/")
@@ -26,6 +60,7 @@
     };
     $scope.printCharge();
 
+
     $scope.quantity = "";
     $scope.TotalCharges = function () {
         if ($scope.ProductSelected == null || $scope.PrintChargesSelected == null) {
@@ -33,7 +68,7 @@
         }
         return ($scope.ProductSelected.salePrice * $scope.quantity) + ($scope.PrintChargesSelected.NumberPrice * $scope.quantity)
     };
-    
+
 
     $scope.lineItems = [];
 
@@ -45,21 +80,24 @@
 
     $scope.createLineItemData = function () {
         var lineItem = {
-            quantity : $scope.quantity,
+            quantity: $scope.quantity,
             product: $scope.ProductSelected.brandName,
             imprintPrice: $scope.PrintChargesSelected.NumberPrice,
             shirtPrice: $scope.ProductSelected.salePrice,
             imprintTotal: $scope.PrintChargesSelected.ColorNumber,
             lineTotal: $scope.TotalCharges()
         }
-        $http.post("/api/lineitem", lineItem)
-            .then (function () {
-            $http.get("/api/lineitem", lineItem)
-            .then(function (result) {
-                $scope.lineItems = result.data;
-            });
-        })
-        
+
+        $scope.lineItems.push(lineItem);
+
+        //
+        //    .then (function () {
+        //    $http.get("/api/lineitem", lineItem)
+        //    .then(function (result) {
+        //        $scope.lineItems = result.data;
+        //    });
+        //})
+
     }
 
     $scope.delete = function (lineitem) {
@@ -70,19 +108,4 @@
             });
     }
 
-    //$scope.orders = [];
-    //$scope.fillInvoice = [];
-    //$scope.invoiceData = [];
-
-    //$scope.invoiceData = $http.get("/api/order")
-    // .then(function (result) {
-    //     $http.get("/api/lineitem")
-    //        .then(function (result) {
-    //            $scope.orders = result.data;
-
-    //        })
-    // });
-
-    
-    
-}]);  
+}]);

@@ -129,12 +129,12 @@
                             <td>
                                 <!--cutomer dropdown menu-->
                                 <div class="form-group">
-                                    <select class="" ng-model="Customer.selected" ng-options="item.FirstName + ' ' +  item.LastName for item in customerList">
+                                    <select class="" ng-model="CustomerSelected" ng-options="item.FirstName + ' ' +  item.LastName for item in customerList">
                                         <option value="" label="Select Customer for New Order"></option>
                                     </select>
                                 </div>
                             </td>
-                            <td><button type="button" class="pull-right" ng-click="createEstimate()">Convert to Estimate</button></td>
+                            <td><button type="button" class="pull-right" ng-click="generateOrder()">Create Order</button></td>
                         </tr>
                     </tbody>
                 </table>
