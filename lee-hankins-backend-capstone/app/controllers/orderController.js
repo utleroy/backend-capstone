@@ -96,12 +96,6 @@
         }
 
         $scope.lineItems.push(lineItem);
-
-        //$scope.quantity = undefined;
-        //$scope.ProductSelected = undefined;
-        //$scope.PrintChargesSelected.NumberPrice = undefined;
-        //$scope.ProductSelected.salePrice = undefined;
-        //$scope.PrintChargesSelected = undefined;
     }
 
     //_________________________________________________________________
