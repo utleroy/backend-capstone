@@ -26,9 +26,9 @@ namespace lee_hankins_backend_capstone.Controllers
         }
 
         // GET: api/LineItem/5
-        public string Get(int id)
+        public LineItem Get(int id)
         {
-            return "value";
+            return _lineItemRepository.Get(id);
         }
 
         // POST: api/LineItem

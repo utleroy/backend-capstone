@@ -1,22 +1,16 @@
-﻿app.controller("invoiceController", ["$scope", "$http", "$location",  function ($scope, $http, $location) {
+﻿app.controller("invoiceController", ["$scope", "$http", "$location", "$routeParams", function ($scope, $http, $location, $routeParams) {
 
-    $scope.orders = [];
-    $scope.fillInvoice = [];
-    $scope.invoiceData = [];
-
-   $scope.invoiceData = $http.get("/api/order")
+    $scope.order = {};
+    $http.get("/api/order/" + $routeParams.orderId)
     .then(function (result) {
-       $http.get("/api/lineitem")
-          .then(function (result) {
-              $scope.orders = result.data;
-               
-           })
+        $scope.order = result.data;
+        $scope.GetTotal = $scope.order.LineItems.reduce(function (prevTotal, currentItem) {
+            return prevTotal + currentItem.lineTotal;
+        }, 0);
+
     });
 
-    //$scope.createInvoice = function () {
-    //   $http.get("/api/lineitem")
-    //     .then(function (result) {
-    //         $scope.fillInvoice = result.data;
-    //});
-    //}
+
+
 }])
+

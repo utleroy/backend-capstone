@@ -30,6 +30,7 @@ namespace lee_hankins_backend_capstone.Controllers
 
         public IEnumerable<Models.Order> GetAll()
         {
+            
             return _context.Order;
         }
 

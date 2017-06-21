@@ -13,7 +13,7 @@ namespace lee_hankins_backend_capstone.Models
         public string LastName { get; set; }
         public string Email { get; set; }
         public DateTime DateActive { get; internal set; }
+        public virtual List<Order> Orders { get; set; }
 
- 
     }
 }
