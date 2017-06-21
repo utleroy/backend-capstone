@@ -30,6 +30,7 @@
             }
             $location.path(`/order/${orderId}`)
         })
+        
     }
     //_________________________________________________________________
     //GENERATE ORDER
@@ -83,11 +84,6 @@
 
     $scope.lineItems = [];
 
-    //$http.get("/api/lineitem")
-    //.then(function (result) {
-    //    $scope.lineItems = result.data;
-
-    //});
 
     $scope.createLineItemData = function () {
         var lineItem = {
@@ -100,6 +96,12 @@
         }
 
         $scope.lineItems.push(lineItem);
+
+        //$scope.quantity = undefined;
+        //$scope.ProductSelected = undefined;
+        //$scope.PrintChargesSelected.NumberPrice = undefined;
+        //$scope.ProductSelected.salePrice = undefined;
+        //$scope.PrintChargesSelected = undefined;
     }
 
     //_________________________________________________________________
