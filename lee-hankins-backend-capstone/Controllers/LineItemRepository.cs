@@ -27,6 +27,11 @@ namespace lee_hankins_backend_capstone.Controllers
             return _context.LineItem;
         }
 
+        public LineItem Get(int id)
+        {
+            return _context.LineItem.Find(id);
+        }
+
         public void Delete(int id)
         {
             _context.LineItem.Remove(_context.LineItem.Find(id));

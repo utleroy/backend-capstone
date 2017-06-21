@@ -22,13 +22,15 @@ namespace lee_hankins_backend_capstone.Controllers
         // GET: api/Order
         public IEnumerable<Order> Get()
         {
+           
             return _orderRepository.GetAll();
         }
 
         // GET: api/Order/5
-        public string Get(int id)
+        public Order Get(int id)
         {
-            return "value";
+            
+            return _orderRepository.Get(id);
         }
 
         // POST: api/Order

@@ -9,11 +9,15 @@
     };
     $scope.populateCustomerList();
 
-    //$scope.CustomerOrder = {};
+    //_________________________________________________________________
+    //GENERATE ORDER
+    //_________________________________________________________________
+
+   
 
     $scope.generateOrder = function () {
         var customerId = $scope.CustomerSelected.CustomerId;
-
+        console.log("cust", customerId);
         $http.post("api/order/", customerId)
         .then(function (result) {
             var orderId = result.data.OrderId;
@@ -22,28 +26,19 @@
                 var lineitem = $scope.lineItems[i];
                 lineitem.orderId = orderId;
                 $http.post("/api/lineitem", lineitem);
-
+                console.log(lineitem.orderId)
             }
-
+            $location.path(`/order/${orderId}`)
         })
-
-        //$http.get("/api/customer")
-        //    .then(function (result) {
-        //        $scope.customers = result.data;
-        //    });
-
-        //$http.get("api/order/")
-        //.then(function (result) {
-        //    $scope.customerOrder = result.data;
-        //    $scope.CustomerSelected = function () {
-        //        $scope.lineItems = $scope.customerOrder;
-        //        console.log("clicked");
-        //    }
-        //});
-
     }
+    //_________________________________________________________________
+    //GENERATE ORDER
+    //_________________________________________________________________
 
-    //gets product list from Db to populate dropdown
+
+    //_________________________________________________________________
+    //POPULATE SHIRTS DROPDOWN
+    //_________________________________________________________________
     $scope.populateProductList = function () {
         $http.get("api/product/")
             .then(function (result) {
@@ -51,6 +46,14 @@
             });
     };
     $scope.populateProductList();
+    //_________________________________________________________________
+    //POPULATE SHIRTS DROPDOWN
+    //_________________________________________________________________
+
+
+    //_________________________________________________________________
+    //POPULATE PRINTPRICING DROPDOWN
+    //_________________________________________________________________
 
     $scope.printCharge = function () {
         $http.get("api/productioncharges/")
@@ -59,7 +62,15 @@
         });
     };
     $scope.printCharge();
+    //_________________________________________________________________
+    //POPULATE PRINTPRICING DROPDOWN
+    //_________________________________________________________________
 
+
+
+    //_________________________________________________________________
+    //STORES LINE ITEM VALUES FROM USER
+    //_________________________________________________________________
 
     $scope.quantity = "";
     $scope.TotalCharges = function () {
@@ -72,11 +83,11 @@
 
     $scope.lineItems = [];
 
-    $http.get("/api/lineitem")
-    .then(function (result) {
-        $scope.lineItems = result.data;
+    //$http.get("/api/lineitem")
+    //.then(function (result) {
+    //    $scope.lineItems = result.data;
 
-    });
+    //});
 
     $scope.createLineItemData = function () {
         var lineItem = {
@@ -89,16 +100,15 @@
         }
 
         $scope.lineItems.push(lineItem);
-
-        //
-        //    .then (function () {
-        //    $http.get("/api/lineitem", lineItem)
-        //    .then(function (result) {
-        //        $scope.lineItems = result.data;
-        //    });
-        //})
-
     }
+
+    //_________________________________________________________________
+    //STORES LINE ITEM VALUES FROM USER
+    //_________________________________________________________________
+
+    //_________________________________________________________________
+    //DELETE LINE ITEM
+    //_________________________________________________________________
 
     $scope.delete = function (lineitem) {
         $http.delete("api/lineitem/" + lineitem.LineItemId);
@@ -107,5 +117,9 @@
                 $scope.lineItems = result.data;
             });
     }
+
+    //_________________________________________________________________
+    //DELETE LINE ITEM
+    //_________________________________________________________________
 
 }]);

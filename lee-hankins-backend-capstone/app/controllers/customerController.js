@@ -13,6 +13,7 @@
     .then(function (result) {
         $scope.customers = result.data;
     });
+
     
 
     $scope.addCustomer = function () {
@@ -29,4 +30,6 @@
                 $scope.customers = result.data;
             });
     }
+
+    
 }])
