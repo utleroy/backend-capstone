@@ -1,13 +1,16 @@
-﻿<div class="container">
-    <div class="row">
-        <table class="table table-striped table-hover cart-table">
+﻿
+<div class="card">
+    <div class="header">
+        <p class="category">Existing Customers</p>
+    </div>
+    <div class="content table-responsive table-full-width">
+        <table class="table table-hover table-striped">
             <thead>
-                <tr>
-                    <th>Update</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email</th>
-                </tr>
+            <th>UPDATE</th>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+            <th>EMAIL</th>
+           
             </thead>
             <tbody ng-repeat="customer in customers">
                 <tr>
@@ -21,6 +24,7 @@
                 </tr>
             </tbody>
         </table>
+
     </div>
 </div>
 

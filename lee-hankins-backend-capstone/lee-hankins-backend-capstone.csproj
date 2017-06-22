@@ -342,15 +342,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="apiKeys.config" />
+    <Content Include="app\content\css\animate.min.css" />
     <Content Include="app\content\css\bootstrap.css" />
     <Content Include="app\content\css\bootstrap.min.css" />
     <Content Include="app\content\css\documentation.css" />
     <Content Include="app\content\css\font-awesome.min.css" />
     <Content Include="app\content\css\jquery.tocify.css" />
+    <Content Include="app\content\css\light-bootstrap-dashboard.css" />
+    <Content Include="app\content\css\pe-icon-7-stroke.css" />
     <Content Include="app\content\css\prettify.css" />
     <Content Include="app\content\css\style-library-1.css" />
     <Content Include="app\content\fonts\fontawesome-webfont.svg" />
     <Content Include="app\content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="app\content\fonts\Pe-icon-7-stroke.svg" />
     <Content Include="app\content\ico\apple-touch-icon-114-precomposed.png" />
     <Content Include="app\content\ico\apple-touch-icon-144-precomposed.png" />
     <Content Include="app\content\ico\apple-touch-icon-57-precomposed.png" />
@@ -373,6 +377,8 @@
     <Content Include="app\content\images\code-7.png" />
     <Content Include="app\content\images\code-8.png" />
     <Content Include="app\content\images\code-9.png" />
+    <Content Include="app\content\images\default-avatar.png" />
+    <Content Include="app\content\images\loading-bubbles.svg" />
     <Content Include="app\content\images\thumbs\blog1.png" />
     <Content Include="app\content\images\thumbs\contact1.png" />
     <Content Include="app\content\images\thumbs\contact2.png" />
@@ -442,11 +448,18 @@
     <Content Include="app\content\images\thumbs\team4.png" />
     <Content Include="app\content\images\web-1.png" />
     <Content Include="app\content\images\web-2.png" />
+    <Content Include="app\content\js\bootstrap-checkbox-radio-switch.js" />
+    <Content Include="app\content\js\bootstrap-notify.js" />
+    <Content Include="app\content\js\bootstrap-select.js" />
     <Content Include="app\content\js\bootstrap.js" />
     <Content Include="app\content\js\bootstrap.min.js" />
+    <Content Include="app\content\js\chartist.min.js" />
+    <Content Include="app\content\js\demo.js" />
+    <Content Include="app\content\js\jquery-1.10.2.js" />
     <Content Include="app\content\js\jquery-ui.min.js" />
     <Content Include="app\content\js\jquery.min.js" />
     <Content Include="app\content\js\jquery.tocify.min.js" />
+    <Content Include="app\content\js\light-bootstrap-dashboard.js" />
     <Content Include="app\content\js\prettify.js" />
     <Content Include="app\controllers\customerController.js" />
     <Content Include="app\controllers\homeController.js" />
@@ -456,6 +469,7 @@
     <Content Include="app\controllers\signupController.js" />
     <Content Include="app\html\addNewOrder.html" />
     <Content Include="app\html\customerView.html" />
+    <Content Include="app\html\dashboard.html" />
     <Content Include="app\html\home.html" />
     <Content Include="app\html\login.html" />
     <Content Include="app\html\newCustomer.html" />
@@ -509,6 +523,9 @@
     <Content Include="app\content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="app\content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="app\content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="app\content\fonts\Pe-icon-7-stroke.eot" />
+    <Content Include="app\content\fonts\Pe-icon-7-stroke.ttf" />
+    <Content Include="app\content\fonts\Pe-icon-7-stroke.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

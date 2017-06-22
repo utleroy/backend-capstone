@@ -1,48 +1,54 @@
 ﻿
-<!--detailed line item totals-->
-<div><h4>{{order.Customer.FirstName}}</h4></div>
+<div class="card">
+    <div class="header">
+        <p class="category">{{order.Customer.FirstName + ' ' + order.Customer.LastName}}</p>
+    </div>
+    <div class="content table-responsive table-full-width">
+        <table class="table table-hover table-striped" ng-repeat="item in order.LineItems">
+            <thead>
+                <tr>
+                    <th>Prpoduct Style</th>
+                    <th>Unit Price</th>
+                    <th># of Print Colors</th>
+                    <th>Imprint Price</th>
+                    <th>Line Total</th>
+                    <th>Quantities</th>
 
-<!--<select class="" ng-model="ViewableOrders" ng-options="item.OrderId + item.Customer for item in orderList">
-    <option value="" label="View Customers Orders"></option>
-</select>-->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{item.product}}</td>
+                    <td>{{item.shirtPrice}}</td>
+                    <td>{{item.imprintTotal}}</td>
+                    <td>{{item.imprintPrice}}</td>
+                    <td>{{item.lineTotal}}</td>
+                    <td>{{item.quantity}}</td>
+                    <!--{{order.LineItems[0].imprintPrice}}-->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="card">
+    <div class="header">
+        <p class="category"></p>
+    </div>
+    <div class="content table-responsive table-full-width">
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>Order Total for {{order.Customer.FirstName + ' ' + order.Customer.LastName}}</th>
+                    <th>Order Number:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{GetTotal}}</td>
+                    <td>{{order.OrderId}}</td>
 
-
-<table class="table table-condensed" ng-repeat="item in order.LineItems">
-    <thead>
-        <tr>
-            <th>Prpoduct Style</th>
-            <th>Unit Price</th>
-            <th># of Print Colors</th>
-            <th>Imprint Price</th>
-            <th>Line Total</th>
-            <th>Quantities</th>
-            
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>{{item.product}}</td>
-            <td>{{item.shirtPrice}}</td>
-            <td>{{item.imprintTotal}}</td>
-            <td>{{item.imprintPrice}}</td>
-            <td>{{item.lineTotal}}</td>
-            <td>{{item.quantity}}</td>
-
-            <!--<td>{{order.LineItems[0].imprintPrice}}</td>-->
-        </tr>
-    </tbody>
-</table>
-
-<table class="table table-condensed">
-    <thead>
-        <tr>
-            <th>Order Total</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>{{GetTotal}}</td>
-            
-        </tr>
-    </tbody>
-</table>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
