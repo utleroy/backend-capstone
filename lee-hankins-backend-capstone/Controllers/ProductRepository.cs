@@ -38,7 +38,7 @@ namespace lee_hankins_backend_capstone.Controllers
             _restClient.Authenticator = new HttpBasicAuthenticator("77205", "19ca413e-38eb-4f90-b617-c06737464fc7");
 
             var request = new RestRequest();
-            request.Resource = "/v2/products/81480,81488,00760?fields=SalePrice,BrandName,ColorName,SizeName";
+            request.Resource = "/v2/products/81480,2839,00760?fields=SalePrice,BrandName,ColorName,SizeName";
 
             var response = _restClient.Get<List<Product>>(request);
 

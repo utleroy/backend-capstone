@@ -3,7 +3,7 @@
     <div class="header">
         <p class="category">Add a line item to the order</p>
     </div>
-    <div class="content table-responsive table-full-width">
+    <div class="content table-responsive table-condensed">
         <table class="table table-hover table-striped">
             <!--add line item table header-->
             <thead>
@@ -22,8 +22,8 @@
             <tbody>
                 <tr>
                     <td>
-                        <div class="form-group">
-                            <select class="" ng-model="ProductSelected" ng-options="item.brandName + ' ' + item.styleName for item in productList">
+                        <div class="input-field">
+                            <select class="browser-default" ng-model="ProductSelected" ng-options="item.brandName + ' ' + item.styleName for item in productList">
                                 <option label="Style"></option>
                             </select>
                         </div>
@@ -34,8 +34,8 @@
                     </td>
                     <td>{{ProductSelected.salePrice}}</td>
                     <td>
-                        <div class="form-group">
-                            <select class="" ng-model="PrintChargesSelected" ng-options="item.ColorNumber for item in printChargeList">
+                        <div class="input-field">
+                            <select class="browser-default" ng-model="PrintChargesSelected" ng-options="item.ColorNumber for item in printChargeList">
                                 <option label="How Many Colors"></option>
                             </select>
                         </div>
@@ -97,38 +97,38 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+            <div class="header">
+                <p class="category">Select Customer</p>
+            </div>
+            <div class="content table-responsive table-full-width">
+                <table class="table table-hover table-striped">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <!--cutomer dropdown menu-->
+                                <div class="input-field">
+                                    <select class="browser-default" ng-model="CustomerSelected" ng-options="item.FirstName + ' ' +  item.LastName for item in customerList">
+                                        <option value="" label="Customer List"></option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td><button type="button" class="pull-right" ng-click="generateOrder()">Create Order</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-        <div class="row">
-            <div class="col-md-8">
-
-            </div>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="header">
-                        <p class="category">Select Customer</p>
-                    </div>
-                    <div class="content table-responsive table-full-width">
-                        <table class="table table-hover table-striped">
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <!--cutomer dropdown menu-->
-                                        <div class="form-group">
-                                            <select class="" ng-model="CustomerSelected" ng-options="item.FirstName + ' ' +  item.LastName for item in customerList">
-                                                <option value="" label="Customer List"></option>
-                                            </select>
-                                        </div>
-                                    </td>
-                                    <td><button type="button" class="pull-right" ng-click="generateOrder()">Create Order</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        </div>
-                    </div>
-                    </div>
-                </div>
+</div>
 
 
 
