@@ -1,12 +1,10 @@
-﻿
-
-
-
-
-<div class="container">
-    <div class="row">
-        <!--line item table-->
-        <table class="table table-condensed">
+﻿<!--line item table-->
+<div class="card">
+    <div class="header">
+        <p class="category">Add a line item to the order</p>
+    </div>
+    <div class="content table-responsive table-condensed">
+        <table class="table table-hover table-striped">
             <!--add line item table header-->
             <thead>
                 <tr>
@@ -24,20 +22,20 @@
             <tbody>
                 <tr>
                     <td>
-                        <div class="form-group">
-                            <select class="" ng-model="ProductSelected" ng-options="item.brandName + ' ' + item.styleName for item in productList">
+                        <div class="input-field">
+                            <select class="browser-default" ng-model="ProductSelected" ng-options="item.brandName for item in productList">
                                 <option label="Style"></option>
                             </select>
                         </div>
                     </td>
-                    
+
                     <td>
                         <input type="text" class="" value="" ng-model="quantity">
                     </td>
                     <td>{{ProductSelected.salePrice}}</td>
                     <td>
-                        <div class="form-group">
-                            <select class="" ng-model="PrintChargesSelected" ng-options="item.ColorNumber for item in printChargeList">
+                        <div class="input-field">
+                            <select class="browser-default" ng-model="PrintChargesSelected" ng-options="item.ColorNumber for item in printChargeList">
                                 <option label="How Many Colors"></option>
                             </select>
                         </div>
@@ -51,21 +49,28 @@
                 </tr>
             </tbody>
         </table>
-        <!--add line item btn-->
-        <hr>
-        <div class="row">
-            <div class="col-sm-4">
+    </div>
+</div>
+<!--add line item btn-->
+<hr>
+<div class="row">
+    <div class="col-sm-4">
 
-            </div>
-            <div class="col-sm-8">
-                <button type="button" class="pull-right" ng-click="createLineItemData()">Add Line Item</button>
-            </div>
+    </div>
+    <div class="col-sm-8">
+        <button type="button" class="pull-right" ng-click="createLineItemData()">Add Line Item</button>
+    </div>
 
-        </div>
-        <hr>
-        <!--detailed line item totals-->
-        <div><h4>Line Item List</h4></div>
-        <table class="table table-condensed">
+</div>
+<hr>
+<!--detailed line item totals-->
+
+<div class="card">
+    <div class="header">
+        <p class="category">Estimate</p>
+    </div>
+    <div class="content table-responsive table-full-width">
+        <table class="table table-hover table-striped">
             <thead>
                 <tr>
                     <th>edit</th>
@@ -92,21 +97,27 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
 
-        <div class="row">
-            <div class="col-md-8">
+    </div>
 
+    <div class="col-md-4">
+        <div class="card">
+            <div class="header">
+                <p class="category">Select Customer</p>
             </div>
-
-            <div class="col-md-4">
-                <table class="table table-striped table-hover cart-table">
+            <div class="content table-responsive table-full-width">
+                <table class="table table-hover table-striped">
                     <tbody>
                         <tr>
                             <td>
                                 <!--cutomer dropdown menu-->
-                                <div class="form-group">
-                                    <select class="" ng-model="CustomerSelected" ng-options="item.FirstName + ' ' +  item.LastName for item in customerList">
-                                        <option value="" label="Select Customer for New Order"></option>
+                                <div class="input-field">
+                                    <select class="browser-default" ng-model="CustomerSelected" ng-options="item.FirstName + ' ' +  item.LastName for item in customerList">
+                                        <option value="" label="Customer List"></option>
                                     </select>
                                 </div>
                             </td>
@@ -116,8 +127,9 @@
                 </table>
             </div>
         </div>
-
     </div>
 </div>
+
+
 
 

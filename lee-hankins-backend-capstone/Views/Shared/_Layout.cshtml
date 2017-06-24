@@ -1,55 +1,70 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!doctype html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>RepAssist</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
-    <title>Sales Rep Assistant</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/bundles/css")
+   
+    @Styles.Render("~/bundles/materialize/css")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-
-    <link rel="shortcut icon" href="ico/favicon.png">
 </head>
 <body ng-app="RepAssist">
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
-                    <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
+    
+        <nav>
+            <div class="nav-wrapper navbar-inverse">
+                <a href="#" class="brand-logo"><h5>REP ASSIST</h5></a>
+                <ul class="right">
+                    <li class="active"></li>
+                    @*<li><a href="/#!/dashboard">Dashboard</a></li>*@
+                    <li><a href="/#!/home">Dashboard</a></li>
+                    <li><a href="/#!/add-customer">Add New Customer</a></li>
+                    <li><a href="/#!/customers">View Customers</a></li>
+                    <li><a href="/#!/new-order">Create Order</a></li>
                 </ul>
             </div>
+        </nav>
+   
+    <section id="color">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="container">
+                        <div class="row">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    </section>
+
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
     @Scripts.Render("~/bundles/angular")
+    @Scripts.Render("~/bundles/materialize")
+    @Scripts.Render("~/bundles/modernizr")
     @RenderSection("scripts", required: false)
-
-
-
 
     
 
 </body>
+
+
 </html>
+
+
+
+
+
+
