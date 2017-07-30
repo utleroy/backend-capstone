@@ -7,13 +7,13 @@ namespace lee_hankins_backend_capstone.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class chargesseed : IMigrationMetadata
+    public sealed partial class go : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(chargesseed));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(go));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706171430446_charges-seed"; }
+            get { return "201707300218528_go"; }
         }
         
         string IMigrationMetadata.Source

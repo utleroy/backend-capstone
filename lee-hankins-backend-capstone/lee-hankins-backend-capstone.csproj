@@ -294,37 +294,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201706171327233_initial-migration.cs" />
-    <Compile Include="Migrations\201706171327233_initial-migration.Designer.cs">
-      <DependentUpon>201706171327233_initial-migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706171430446_charges-seed.cs" />
-    <Compile Include="Migrations\201706171430446_charges-seed.Designer.cs">
-      <DependentUpon>201706171430446_charges-seed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706171552576_lineItem.cs" />
-    <Compile Include="Migrations\201706171552576_lineItem.Designer.cs">
-      <DependentUpon>201706171552576_lineItem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706171642540_newLineItems.cs" />
-    <Compile Include="Migrations\201706171642540_newLineItems.Designer.cs">
-      <DependentUpon>201706171642540_newLineItems.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706171700256_newLineItems1.cs" />
-    <Compile Include="Migrations\201706171700256_newLineItems1.Designer.cs">
-      <DependentUpon>201706171700256_newLineItems1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706180119538_InitialOrder.cs" />
-    <Compile Include="Migrations\201706180119538_InitialOrder.Designer.cs">
-      <DependentUpon>201706180119538_InitialOrder.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706192321481_modelUpdate.cs" />
-    <Compile Include="Migrations\201706192321481_modelUpdate.Designer.cs">
-      <DependentUpon>201706192321481_modelUpdate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201706200013397_modelUpdate2.cs" />
-    <Compile Include="Migrations\201706200013397_modelUpdate2.Designer.cs">
-      <DependentUpon>201706200013397_modelUpdate2.cs</DependentUpon>
+    <Compile Include="Migrations\201707300218528_go.cs" />
+    <Compile Include="Migrations\201707300218528_go.Designer.cs">
+      <DependentUpon>201707300218528_go.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -620,29 +592,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706171327233_initial-migration.resx">
-      <DependentUpon>201706171327233_initial-migration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706171430446_charges-seed.resx">
-      <DependentUpon>201706171430446_charges-seed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706171552576_lineItem.resx">
-      <DependentUpon>201706171552576_lineItem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706171642540_newLineItems.resx">
-      <DependentUpon>201706171642540_newLineItems.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706171700256_newLineItems1.resx">
-      <DependentUpon>201706171700256_newLineItems1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706180119538_InitialOrder.resx">
-      <DependentUpon>201706180119538_InitialOrder.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706192321481_modelUpdate.resx">
-      <DependentUpon>201706192321481_modelUpdate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201706200013397_modelUpdate2.resx">
-      <DependentUpon>201706200013397_modelUpdate2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201707300218528_go.resx">
+      <DependentUpon>201707300218528_go.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
